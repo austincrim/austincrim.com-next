@@ -8,8 +8,6 @@ const App = () => {
             .then(res => res.json())
             .then(res => setPosts(res))
     }, []);
-    
-    console.log(posts)
 
     return <div>
         {posts.map(post => <li key={post.title}>{post.title}</li>)}
