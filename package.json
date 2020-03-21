@@ -63,7 +63,6 @@
   },
   "scripts": {
     "dev": "node scripts/start.js",
-    "start-dev": "nodemon src/server/app.js",
     "start": "node src/server/app.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"

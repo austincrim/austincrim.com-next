@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+    margin: 5px 0;
+}

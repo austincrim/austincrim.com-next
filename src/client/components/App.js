@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { PostForm } from './PostForm'
+import { PostForm } from './PostForm';
+import '../styles/App.css';
 
 const App = () => {
     const [posts, setPosts] = useState([]);
@@ -9,9 +10,9 @@ const App = () => {
             .then(res => setPosts(res))
     }, []);
 
-    return <div>
-        {posts.map(post => <li key={post.title}>{post.title}</li>)}
+    return <div id="application">
         <PostForm />
+        {posts.map(post => <li key={post.title}><a href="#">{post.title}</a></li>)}
     </div>;
 };
 
