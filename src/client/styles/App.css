@@ -1,14 +1,23 @@
-a {
-    text-decoration: none;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 
 div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    font-family: 'Roboto';
 }
 
-li {
+.post-list {
     list-style: none;
-    margin: 5px 0;
+}
+
+.post-title {
+    text-decoration: none;
 }
