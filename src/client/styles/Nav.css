@@ -1,25 +1,26 @@
 .nav-item {
     display: inline-block;
-    font-family: 'Baloo 2';
     transition: all .2s;
     padding: 12px;
 }
 
 .nav-link {
-    color: white;
+    border-radius: 8px;
+    color: black;
     display: inline;
+    font-family: 'Baloo 2';
     list-style: none;
     text-decoration: none;
+    transition: all .2s;
     padding: 12px;
 }
 
 .nav-link:hover {
-    background-color: #5486886b;
-    color: #ddd;
+    background-color: #bee3f8;
+    color: black;
 }
 
 #navbar {
-    background-color: #5f9ea0;
     height: 50px;
     text-align: center;
     width: 100%;
