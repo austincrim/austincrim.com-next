@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Nav from "./Nav";
-import PostPreview from "./PostPreview";
-import '../styles/tailwind.css';
+import Nav from "./components/Nav";
+import PostPreview from "./components/PostPreview";
+import '../styles/index.css';
 
-const App = () => {
+const Index = () => {
   const [posts, setPosts] = useState();
   useEffect(() => {
     fetch("https://austin-crim-blog-api.herokuapp.com/posts")
@@ -12,13 +12,14 @@ const App = () => {
   }, []);
 
   return (
-    <div id="application">
+    <div>
       <Nav />
-      <div>
+      <div className="">
+        <h3 className="ml-8 text-4xl font-sans">Posts</h3>
         {posts ? posts.map(post => (<PostPreview post={post} />)) : <div className="text-center pt-10 text-2xl text-gray-600">Loading...</div>}
       </div>
     </div>
   );
 };
 
-export default App;
+export default Index;
