@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
 import PostPreview from "./PostPreview";
-import "../styles/App.css";
+import '../styles/tailwind.css';
 
 const App = () => {
   const [posts, setPosts] = useState();
@@ -14,7 +14,9 @@ const App = () => {
   return (
     <div id="application">
       <Nav />
-      {posts ? posts.map(post => (<PostPreview post={post} />)) : <div className="text-center pt-10 text-2xl text-gray-600">Loading...</div>}
+      <div>
+        {posts ? posts.map(post => (<PostPreview post={post} />)) : <div className="text-center pt-10 text-2xl text-gray-600">Loading...</div>}
+      </div>
     </div>
   );
 };
