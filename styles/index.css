@@ -9,7 +9,7 @@ nav {
 }
 
 .nav-item {
-    @apply p-5 mx-6 inline-block transition-colors ease-in-out duration-200 border-b border-blue-200;
+    @apply p-5 mx-6 inline-block transition-colors ease-in-out duration-200 border-b-2 border-blue-200;
 }
 
 .nav-item:hover {
