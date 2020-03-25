@@ -15,7 +15,16 @@ export default () => {
     if (title && content) {
       const response = await fetch(
         "https://austin-crim-blog-api.herokuapp.com/posts",
-        { method: "post", body: { title: title, content: content } }
+        {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            title,
+            content
+          })
+        }
       );
       if (!response.ok) {
         alert("bummer");
