@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Nav from "./components/Nav";
+import Nav from "../components/Nav";
 
 import toastr from "toastr";
 import "toastr/build/toastr.css";
