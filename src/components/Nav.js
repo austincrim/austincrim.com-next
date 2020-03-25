@@ -11,12 +11,12 @@ export default () => {
             <li className="nav-item">Home</li>
           </a>
         </Link>
-        <Link href="/PostForm">
+        <Link href="/postForm">
           <a>
             <li className="nav-item">Compose</li>
           </a>
         </Link>
-        <Link href="/About">
+        <Link href="/about">
           <a>
             <li className="nav-item">About</li>
           </a>
