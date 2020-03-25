@@ -10,54 +10,64 @@ export default () => {
   }
 
   async function handleClick(event) {
-    console.log(event);
     event.preventDefault();
-    const response = await fetch(
-      "https://austin-crim-blog-api.herokuapp.com/posts",
-      { method: "post", body: { title: title, content: content } }
-    );
-    if (!response.ok) {
-      alert("bummer");
+
+    if (title && content) {
+      const response = await fetch(
+        "https://austin-crim-blog-api.herokuapp.com/posts",
+        { method: "post", body: { title: title, content: content } }
+      );
+      if (!response.ok) {
+        alert("bummer");
+      } else {
+        console.log(`Post created with title: ${title}`);
+        setTitle("");
+        setContent("");
+      }
     }
   }
 
   return (
     <>
       <Nav />
-      <div class="w-full max-w-lg mx-auto mt-12">
-        <form class="bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          <div class="mb-4">
+      <div className="w-full max-w-2xl mx-auto mt-12">
+        <form className="bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <div className="mb-4">
             <label
-              class="block text-gray-700 text-sm font-bold mb-2"
-              for="title"
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="title"
             >
               Title
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="title"
               type="text"
-              placeholder="Title"
+              autoComplete="off"
+              onChange={eventHandler(setTitle)}
+              value={title}
             />
           </div>
-          <div class="mb-6">
+          <div className="mb-6">
             <label
-              class="block text-gray-700 text-sm font-bold mb-2"
-              for="content"
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="content"
             >
               Content
             </label>
             <textarea
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="content"
-              type="content"
-              placeholder="Content"
+              rows="10"
+              value={content}
+              onChange={eventHandler(setContent)}
             />
           </div>
-          <div class="flex items-center justify-between">
+          <div className="flex items-center justify-between">
             <button
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
+              onClick={event => handleClick(event)}
             >
               Post
             </button>

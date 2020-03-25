@@ -1,21 +1,27 @@
-import React from 'react';
-import Link from 'next/link';
-import '../../styles/index.css';
+import React from "react";
+import Link from "next/link";
+import "../../styles/index.css";
 
 export default () => {
-    return <nav className="text-center">
-        <ul>
-            <li className="nav-item">
-                <Link href="/">
-                    <a>Home</a>
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link href="/PostForm">
-                <a>Compose</a>
-                </Link>
-            </li>
-            <li className="nav-item"><a href="#">Posts</a></li>
-        </ul>
+  return (
+    <nav className="text-center">
+      <ul>
+        <Link href="/">
+          <a>
+            <li className="nav-item">Home</li>
+          </a>
+        </Link>
+        <Link href="/PostForm">
+          <a>
+            <li className="nav-item">Compose</li>
+          </a>
+        </Link>
+        <Link href="/About">
+          <a>
+            <li className="nav-item">About</li>
+          </a>
+        </Link>
+      </ul>
     </nav>
-}
+  );
+};

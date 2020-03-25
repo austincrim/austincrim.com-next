@@ -31,7 +31,7 @@ export default () => {
       <div className="p-8">
         <h3 className="ml-8 text-4xl font-sans">Posts</h3>
         {posts ? (
-          sortPosts(posts).map(post => <PostPreview post={post} />)
+          sortPosts(posts).map(post => <PostPreview key={post._id} post={post} />)
         ) : (
           <div className="ml-8 text-2xl text-gray-600">Loading...</div>
         )}
