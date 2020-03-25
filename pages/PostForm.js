@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Nav from "./components/Nav";
 
+import toastr from "toastr";
+import "toastr/build/toastr.css";
+toastr.options.positionClass = "toast-bottom-left";
+
 export default () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -27,9 +31,10 @@ export default () => {
         }
       );
       if (!response.ok) {
-        alert("bummer");
+        toastr.error("Post Creation Failed :/");
+        console.error(response);
       } else {
-        console.log(`Post created with title: ${title}`);
+        toastr.success("Post Created!");
         setTitle("");
         setContent("");
       }
@@ -85,24 +90,4 @@ export default () => {
       </div>
     </>
   );
-  {
-    /* <form>
-        <label>Title</label>
-        <input
-          type="text"
-          name="title"
-          onChange={eventHandler(setTitle)}
-          value={title}
-        />
-        <br />
-        <label>Content</label>
-        <textarea
-          name="content"
-          onChange={eventHandler(setContent)}
-          value={content}
-        />
-        <br />
-        <button onClick={() => handleClick}>Submit</button>
-      </form> */
-  }
 };
