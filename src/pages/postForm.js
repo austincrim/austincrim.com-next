@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import Nav from "../components/Nav";
-
-import toastr from "toastr";
-import "toastr/build/toastr.css";
-toastr.options.positionClass = "toast-bottom-left";
+import { toast, ToastContainer } from "react-nextjs-toast";
 
 export default () => {
   const [title, setTitle] = useState("");
@@ -31,10 +28,10 @@ export default () => {
         }
       );
       if (!response.ok) {
-        toastr.error("Post Creation Failed :/");
         console.error(response);
+        toast.notify("Post Creation Failed :/", {type: "error", duration: 3});
       } else {
-        toastr.success("Post Created!");
+        toast.notify("Post Created!", {type: "success", duration: 3});
         setTitle("");
         setContent("");
       }
@@ -43,6 +40,7 @@ export default () => {
 
   return (
     <>
+      <ToastContainer />
       <Nav />
       <div className="w-full max-w-2xl mx-auto mt-12">
         <form className="bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">

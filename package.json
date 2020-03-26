@@ -17,7 +17,7 @@
     "next": "^9.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "toastr": "^2.1.4"
+    "react-nextjs-toast": "^1.0.7"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",

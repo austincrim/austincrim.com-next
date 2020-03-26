@@ -9,7 +9,7 @@ export default () => {
     fetch("https://austin-crim-blog-api.herokuapp.com/posts")
       .then(res => res.json())
       .then(res => setPosts(res));
-  }, []);
+  }, [posts]);
 
   const sortPosts = array => {
     array.sort((a, b) => {
