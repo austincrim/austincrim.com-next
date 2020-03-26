@@ -6,11 +6,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start -p $PORT",
-    "heroku-postbuild": "npm run build"
+    "start": "next start -p $PORT"
   },
   "keywords": [],
-  "author": "",
+  "author": "Austin Crim",
   "license": "ISC",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",

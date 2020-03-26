@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Roboto&display=swap");
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
-nav {
-    font-family: 'Baloo 2';
-    font-weight: 500;
-}
 
 .nav-item {
-    @apply p-5 mx-6 inline-block transition-colors ease-in-out duration-200 border-b-2 border-blue-200;
+  @apply p-5 mx-6 inline-block transition-colors ease-in-out duration-200 border-b-2 border-blue-200;
 }
 
 .nav-item:hover {
-    @apply bg-blue-200
+  @apply bg-blue-200;
+}
+
+@tailwind utilities;
+
+nav {
+  font-family: "Baloo 2";
+  font-weight: 500;
 }

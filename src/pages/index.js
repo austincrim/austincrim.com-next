@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import PostPreview from "../components/PostPreview";
-import "../styles/index.css";
 
 export default () => {
   const [posts, setPosts] = useState();
