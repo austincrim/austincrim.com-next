@@ -6,9 +6,9 @@ const Post = props => {
   return (
     <>
       <Nav />
-      <div className="max-w-lg my-10 mx-auto text-center">
-        <div className="text-4xl">{props.post.title}</div>
-        <div className="text-left py-8">
+      <div className="max-w-xl p-2 my-10 mx-auto border-2 border-blue-800 rounded">
+        <div className="text-4xl mb-2 text-center">{props.post.title}</div>
+        <div className="text-left py-6 text-gray-800">
             {props.post.content}
         </div>
       </div>

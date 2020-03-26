@@ -23,8 +23,11 @@ export default ({ post }) => {
         </a>
       </Link>
       <div>
-        <button onClick={() => deletePost(post._id)} className="mt-2 text-xl text-red-600">
-          X
+        <button className="p-2 mt-4 mr-4 text-sm bg-white hover:bg-gray-200 rounded font-semibold">
+          Update
+        </button>
+        <button onClick={() => deletePost(post._id)} className="p-2 text-sm bg-red-400 hover:bg-red-500 rounded font-semibold">
+          Delete
         </button>
       </div>
     </div>
