@@ -27,7 +27,7 @@ export default () => {
   return (
     <div>
       <Nav />
-      <div className="p-8">
+      <div className="p-8 flex-row flex-wrap">
         <h3 className="ml-8 text-4xl font-sans">Posts</h3>
         {posts ? (
           sortPosts(posts).map(post => (

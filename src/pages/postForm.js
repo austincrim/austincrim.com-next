@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import Nav from "../components/Nav";
 import { toast, ToastContainer } from "react-nextjs-toast";
+import marked from 'marked';
+import Nav from "../components/Nav";
 
 export default () => {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState();
 
   function eventHandler(setState) {
     return event => setState(event.target.value);
@@ -42,7 +43,7 @@ export default () => {
     <>
       <ToastContainer />
       <Nav />
-      <div className="w-full max-w-2xl mx-auto mt-12">
+      <div className="max-w-2xl m-12 mx-auto">
         <form className="bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
             <label
@@ -71,17 +72,24 @@ export default () => {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="content"
               rows="10"
-              value={content}
-              onChange={eventHandler(setContent)}
+              placeholder="Markdown Supported"
+              onChange={event => setContent(marked(event.target.value))}
             />
           </div>
-          <div className="flex items-center justify-between">
+          <div>
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="w-full mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
               onClick={event => handleClick(event)}
             >
-              Post
+              Submit
+            </button>
+            <button
+              className="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+              onClick={() => setContent(marked(content))}
+            >
+              Preview
             </button>
           </div>
         </form>
