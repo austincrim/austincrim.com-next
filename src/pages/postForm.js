@@ -87,7 +87,7 @@ export default () => {
             <button
               className="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
-              onClick={() => setContent(marked(content))}
+              // TODO
             >
               Preview
             </button>
