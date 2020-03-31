@@ -13,7 +13,7 @@ export default ({ post }) => {
   };
 
   return (
-    <div className="w-auto inline-flex m-8 p-6 bg-blue-200 rounded-lg shadow-md hover:shadow-xl transition duration-200 ease-in-out">
+    <div className="w-auto inline-flex m-8 p-6 bg-blue-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-100 ease-in">
       <Link href={`/p/${post._id}`}>
         <a>
           <h4 className="text-lg font-mono font-bold">{post.title}</h4>
