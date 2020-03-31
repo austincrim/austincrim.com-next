@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-nextjs-toast";
 import marked from 'marked';
+import DOMPurify from 'dompurify';
 import Nav from "../components/Nav";
 
 export default () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState();
+  const [modalVisible, setModalVisible] = useState(false);
 
   function eventHandler(setState) {
     return event => setState(event.target.value);
@@ -35,7 +37,10 @@ export default () => {
         toast.notify("Post Created!", {type: "success", duration: 3});
         setTitle("");
         setContent("");
+        document.querySelector('textarea').value = "";
       }
+    } else {
+      toast.notify("Please enter both a title and content.", {type: "error", duration: 3});
     }
   }
 
@@ -73,7 +78,7 @@ export default () => {
               id="content"
               rows="10"
               placeholder="Markdown Supported"
-              onChange={event => setContent(marked(event.target.value))}
+              onChange={event => setContent(DOMPurify.sanitize(marked(event.target.value)))}
             />
           </div>
           <div>
@@ -87,12 +92,15 @@ export default () => {
             <button
               className="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
-              // TODO
+              onClick={() => setModalVisible(!modalVisible)}
             >
               Preview
             </button>
           </div>
         </form>
+      </div>
+      <div className={`w-full absolute-center text-center ${modalVisible ? "visible" : "invisible"}`} dangerouslySetInnerHTML={{__html: content}} >
+
       </div>
     </>
   );
