@@ -28,7 +28,7 @@ export default () => {
     <div>
       <Nav />
       <div className="p-8 flex-row flex-wrap">
-        <h3 className="ml-8 text-4xl font-sans">Posts</h3>
+        <h3 className="ml-8 text-4xl font-sans text-blue-700">Posts</h3>
         {posts ? (
           sortPosts(posts).map(post => (
             <PostPreview key={post._id} post={post} />
