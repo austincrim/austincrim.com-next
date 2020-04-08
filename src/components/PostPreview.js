@@ -13,7 +13,7 @@ export default ({ post }) => {
   };
 
   return (
-    <div className="w-auto inline-flex m-8 p-6 bg-blue-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-100 ease-in">
+    <div className="w-auto inline-flex m-8 p-6 bg-blue-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-100 ease-in">
       <Link href={`/p/${post._id}`}>
         <a>
           <h4 className="text-lg font-mono font-bold">{post.title}</h4>
@@ -23,7 +23,7 @@ export default ({ post }) => {
         </a>
       </Link>
       <div>
-        <button onClick={() => deletePost(post._id)} className="ml-4 mt-12 p-2 text-sm bg-red-400 hover:bg-red-500 rounded font-semibold">
+        <button href="#" onClick={() => deletePost(post._id)} className="ml-4 mt-12 text-gray-700 text-sm hover:text-red-500">
           Delete
         </button>
       </div>

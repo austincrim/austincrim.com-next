@@ -4,7 +4,7 @@ import Link from "next/link";
 export default () => {
   return (
     <nav className="text-center">
-      <ul>
+      <ul className="bg-white shadow-sm">
         <Link href="/">
           <a>
             <li className="nav-item">Home</li>
