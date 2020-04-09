@@ -19,3 +19,33 @@ body {
     font-family: "Rubik", sans-serif;
     @apply bg-gray-800;
 }
+
+#hero {
+    background-image: linear-gradient(90deg, #c3dafe, #7f9cf5);
+}
+
+.btn {
+   @apply py-2 px-4 mt-4 mx-2 rounded transition-all duration-150 ease-in;
+}
+
+.btn:hover {
+    @apply shadow-md;
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    @apply duration-75 shadow-none;
+    transform: translateY(2px);
+}
+
+.primary-btn {
+    @apply  bg-gray-700 text-gray-200;
+}
+
+.primary-btn:hover {
+    @apply  bg-gray-800;
+}
+
+.secondary-btn {
+    @apply border-2 border-gray-700 text-gray-700;
+}
