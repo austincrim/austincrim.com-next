@@ -1,26 +1,41 @@
-import React from "react";
-import Link from "next/link";
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 export default () => {
-  return (
-    <nav className="text-center">
-      <ul className="bg-white shadow-sm">
-        <Link href="/">
+    return (
+        <nav>
+            <ul className="flex flex-col md:flex-row justify-center py-2 text-gray-200 bg-gray-700 shadow-md">
+                <Link href="/">
+                    <a className="nav-item">
+                        <li>Home</li>
+                    </a>
+                </Link>
+                <Link href="#skills">
+                    <a className="nav-item">
+                        <li>Skills</li>
+                    </a>
+                </Link>
+                <Link href="#portfolio">
+                    <a className="nav-item">
+                        <li>Portfolio</li>
+                    </a>
+                </Link>
+                <Link href="#contact">
+                    <a className="nav-item">
+                        <li>Contact</li>
+                    </a>
+                </Link>
+                {/* <Link href="/blog">
           <a>
-            <li className="nav-item">Home</li>
+            <li>Blog</li>
           </a>
         </Link>
         <Link href="/postForm">
           <a>
-            <li className="nav-item">Compose</li>
+            <li>Compose</li>
           </a>
-        </Link>
-        <Link href="/about">
-          <a>
-            <li className="nav-item">About</li>
-          </a>
-        </Link>
-      </ul>
-    </nav>
-  );
+        </Link> */}
+            </ul>
+        </nav>
+    );
 };
