@@ -3,21 +3,21 @@ import Link from "next/link";
 
 export default () => {
   return (
-    <nav className="text-center">
-      <ul className="bg-white shadow-sm">
+    <nav>
+      <ul>
         <Link href="/">
           <a>
-            <li className="nav-item">Home</li>
+            <li>Home</li>
+          </a>
+        </Link>
+        <Link href="/blog">
+          <a>
+            <li>Blog</li>
           </a>
         </Link>
         <Link href="/postForm">
           <a>
-            <li className="nav-item">Compose</li>
-          </a>
-        </Link>
-        <Link href="/about">
-          <a>
-            <li className="nav-item">About</li>
+            <li>Compose</li>
           </a>
         </Link>
       </ul>
