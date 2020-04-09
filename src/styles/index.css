@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Poiret+One&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .nav-item {
-    @apply mx-8 p-2 rounded transition-colors duration-150 ease-out text-lg;
+    @apply mx-8 p-2 rounded transition-colors duration-150 ease-out;
 }
 
 .nav-item:hover {
@@ -21,7 +21,7 @@ body {
 }
 
 #hero {
-    background-image: linear-gradient(90deg, #c3dafe, #7f9cf5);
+    background-image: linear-gradient(45deg, #c3dafe, #667eea);
 }
 
 .btn {

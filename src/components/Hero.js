@@ -4,15 +4,16 @@ const Hero = () => {
     return (
         <div id="hero" className="w-full mx-auto py-10 text-gray-700">
             <div className="text-center w-full md:w-1/2 mx-auto px-4 py-8 bg-gray-200 rounded shadow-xl">
-                <h1 className="text-4xl ">
+                <h1 className="text-4xl">
                     Hi, I'm{' '}
                     <span className="text-indigo-400 font-semibold tracking-wide">
-                        Austin Crim,
+                        Austin Crim
                     </span>
+                    ,
                 </h1>
                 <h2 className="text-3xl font-light">
                     a full-stack web developer.
-                    <br /> Welcome to my portfolio.
+                    <br />Welcome to my portfolio.
                 </h2>
                 <div className="mt-4">
                     <button className="btn primary-btn">
