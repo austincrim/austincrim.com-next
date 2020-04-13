@@ -10,6 +10,11 @@ export default () => {
                         <li>Home</li>
                     </a>
                 </Link>
+                <Link href="#experience">
+                    <a className="nav-item">
+                        <li>Experience</li>
+                    </a>
+                </Link>
                 <Link href="#skills">
                     <a className="nav-item">
                         <li>Skills</li>
