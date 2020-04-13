@@ -15,6 +15,21 @@
     @apply bg-gray-800;
 }
 
+@media(max-width: 768px) {
+    .show-nav {
+        display: flex;
+    }
+    .hide-nav {
+        display: none;
+    }
+}
+
+@media(min-width: 769px) {
+    .hide-hamburger {
+        display: none;
+    }
+}
+
 body {
     font-family: "Rubik", sans-serif;
     @apply bg-gray-800;
