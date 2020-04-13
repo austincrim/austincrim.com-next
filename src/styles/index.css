@@ -54,13 +54,13 @@ body {
 }
 
 .primary-btn {
-    @apply  bg-gray-700 text-gray-200;
+    @apply  bg-indigo-600 text-gray-200;
 }
 
 .primary-btn:hover {
-    @apply  bg-gray-800;
+    @apply  bg-indigo-700;
 }
 
 .secondary-btn {
-    @apply border-2 border-gray-700 text-gray-700;
+    @apply border-2 border-indigo-500 text-indigo-500;
 }
