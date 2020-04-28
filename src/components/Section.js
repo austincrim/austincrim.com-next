@@ -13,7 +13,7 @@ const Section = (props) => {
             <div className="max-w-6xl mx-auto">
                 <h2
                     className={`text-3xl font-semibold mb-6 ${
-                        props.primary ? "text-indigo-500" : "text-indigo-400"
+                        props.primary ? "text-indigo-600" : "text-indigo-300"
                     }`}
                 >
                     {props.title}

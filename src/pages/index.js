@@ -11,19 +11,20 @@ const Index = () => {
             <Nav />
             <Hero />
             <Section primary title="Skills">
-                <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4">
-                    <Skill title="NodeJS">
+                <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10">
+                    <Skill title="NodeJS" image="https://www.pikpng.com/pngl/b/430-4309640_js-logo-nodejs-logo-clipart.png">
                         asdfkj;alksdjf;alks
                     </Skill>
-                    
-                    <Skill title="React">
+
+                    <Skill title="React" image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png">
                         asfdkja;ldsf;
                     </Skill>
 
-                    <Skill title="COBOL">
+                    <Skill title="COBOL" image="https://www.faircom.com/wp-content/uploads/cobol-thumb.png">
                         adsflkjas;dlfal;s
                     </Skill>
-                    <Skill title="Google Cloud">
+
+                    <Skill title="Google Cloud" image="https://cloud.google.com/images/social-icon-google-cloud-1200-630.png">
                         adfkja;ldskflakj
                     </Skill>
                 </div>
