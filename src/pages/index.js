@@ -12,21 +12,13 @@ const Index = () => {
             <Hero />
             <Section primary title="Skills">
                 <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10">
-                    <Skill title="NodeJS" image="https://www.pikpng.com/pngl/b/430-4309640_js-logo-nodejs-logo-clipart.png">
-                        asdfkj;alksdjf;alks
-                    </Skill>
+                    <Skill title="NodeJS" image="https://www.pikpng.com/pngl/b/430-4309640_js-logo-nodejs-logo-clipart.png" />
 
-                    <Skill title="React" image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png">
-                        asfdkja;ldsf;
-                    </Skill>
+                    <Skill title="React" image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" />
 
-                    <Skill title="COBOL" image="https://www.faircom.com/wp-content/uploads/cobol-thumb.png">
-                        adsflkjas;dlfal;s
-                    </Skill>
+                    <Skill title="COBOL" image="/server.png" />
 
-                    <Skill title="Google Cloud" image="https://cloud.google.com/images/social-icon-google-cloud-1200-630.png">
-                        adfkja;ldskflakj
-                    </Skill>
+                    <Skill title="Google Cloud" image="https://cloud.google.com/images/social-icon-google-cloud-1200-630.png" />
                 </div>
             </Section>
             <Section title="Portfolio">

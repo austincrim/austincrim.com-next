@@ -73,3 +73,12 @@ body {
 .secondary-btn {
     @apply border-2 border-indigo-500 text-indigo-700;
 }
+
+.skill {
+    transition: transform .2s ease-in, box-shadow .2s ease-in;
+}
+
+.skill:hover {
+    @apply shadow-lg;
+    transform: translateY(-2px);
+}
