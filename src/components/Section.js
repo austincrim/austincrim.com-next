@@ -12,7 +12,7 @@ const Section = (props) => {
         >
             <div className="max-w-6xl mx-auto">
                 <h2
-                    className={`text-3xl font-semibold mb-6 ${
+                    className={`text-3xl font-semibold mb-6 text-center sm:text-left ${
                         props.primary ? "text-indigo-600" : "text-indigo-300"
                     }`}
                 >
@@ -23,5 +23,6 @@ const Section = (props) => {
         </div>
     );
 };
+
 
 export default Section;
