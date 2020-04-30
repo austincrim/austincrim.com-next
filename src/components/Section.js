@@ -7,7 +7,7 @@ const Section = (props) => {
 
     return (
         <div
-            id={props.title.toLowerCase()}
+            id={props.id}
             className={`w-full leading-loose px-10 py-12 ${colorStyle}`}
         >
             <div className="max-w-6xl mx-auto">

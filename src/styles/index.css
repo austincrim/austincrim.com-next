@@ -16,11 +16,11 @@ nav {
 }
 
 .nav-item:hover {
-    @apply bg-gray-600;
+    @apply bg-gray-300;
 }
 
 .nav-item:active {
-    @apply bg-gray-800;
+    @apply bg-gray-400;
 }
 
 @media(max-width: 768px) {

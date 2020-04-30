@@ -6,7 +6,7 @@ export default () => {
 
     return (
         <nav>
-            <div className="flex justify-end bg-gray-700">
+            <div className="flex justify-end">
                 <button
                     className={`m-4 hide-hamburger`}
                     onClick={() => setExpanded(!expanded)}
@@ -36,7 +36,7 @@ export default () => {
                 </button>
             </div>
             <ul
-                className={`flex flex-col md:flex-row justify-center py-2 text-gray-200 bg-gray-700 shadow-md 
+                className={`flex flex-col md:flex-row justify-center py-2 w-full text-gray-700 shadow-md bg-gray-200 fixed z-10 border-t-4 border-indigo-500
                 ${expanded ? "show-nav" : "hide-nav"}`}
             >
                 <Link href="/">

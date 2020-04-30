@@ -10,7 +10,7 @@ const Index = () => {
         <>
             <Nav />
             <Hero />
-            <Section primary title="Tools I Have Used">
+            <Section primary title="Tools I Have Used" id="skills">
                 <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10">
                     <Skill title="NodeJS" image="https://www.pikpng.com/pngl/b/430-4309640_js-logo-nodejs-logo-clipart.png" />
                     <Skill title="React" image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" />
@@ -21,7 +21,7 @@ const Index = () => {
                     
                 </div>
             </Section>
-            <Section title="Things I Have Built">
+            <Section title="Things I Have Built" id="portfolio">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
                 nemo in, dolor beatae facilis ratione vel! Quaerat dolor dicta
                 nisi explicabo consequatur deleniti dolorum iusto! Quis esse
@@ -31,7 +31,7 @@ const Index = () => {
                 deserunt excepturi rerum facilis beatae labore dolorum
                 consequuntur.
             </Section>
-            <Section primary title="Contact">
+            <Section primary title="Want to Chat?" id="contact">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
                 nemo in, dolor beatae facilis ratione vel! Quaerat dolor dicta
                 nisi explicabo consequatur deleniti dolorum iusto! Quis esse
