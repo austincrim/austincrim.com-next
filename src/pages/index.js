@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import React from "react";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
@@ -5,20 +7,17 @@ import Section from "../components/Section";
 import Skill from "../components/Skill";
 import Footer from "../components/Footer";
 
-const Index = () => {
+const Index = ({ skills }) => {
     return (
         <>
             <Nav />
             <Hero />
             <Section primary title="Tools I Have Used" id="skills">
-                <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10">
-                    <Skill title="NodeJS" image="https://www.pikpng.com/pngl/b/430-4309640_js-logo-nodejs-logo-clipart.png" />
-                    <Skill title="React" image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" />
-                    <Skill title="Next.js" image="https://pbs.twimg.com/profile_images/1252531684353998848/6R0-p1Vf_400x400.jpg" />
-                    <Skill title="COBOL" image="/server.png" />
-                    <Skill title="Google Cloud" image="https://cloud.google.com/images/social-icon-google-cloud-1200-630.png" />
-                    <Skill title="CI/CD" image="/cicd.png" />
-                    
+                <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-10">
+                    {skills.map((skill, index) => {
+                        return <Skill title={skill.title} image={skill.imagePath} alt={skill.alt} key={index} />
+                    })
+                    }
                 </div>
             </Section>
             <Section title="Things I Have Built" id="portfolio">
@@ -45,5 +44,14 @@ const Index = () => {
         </>
     );
 };
+
+export async function getStaticProps() {
+    const jsonSkills = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/skills.json')));
+    return {
+        props: {
+            skills: jsonSkills.skills
+        }
+    }
+}
 
 export default Index;

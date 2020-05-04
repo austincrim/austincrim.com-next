@@ -6,27 +6,24 @@ export default () => {
 
     return (
         <nav>
-            <div className="flex justify-end">
+            <div className="flex justify-end bg-gray-200">
                 <button
                     className={`m-4 hide-hamburger`}
                     onClick={() => setExpanded(!expanded)}
                 >
-                    <svg viewBox="0 0 100 80" width="40" height="40">
+                    <svg className="text-current text-gray-700" viewBox="0 0 100 80" width="40" height="40">
                         <rect
-                            fill="white"
                             rx="8"
                             width="100"
                             height="10"
                         ></rect>
                         <rect
-                            fill="white"
                             rx="8"
                             y="30"
                             width="100"
                             height="10"
                         ></rect>
                         <rect
-                            fill="white"
                             rx="8"
                             y="60"
                             width="100"

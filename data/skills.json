@@ -1,0 +1,44 @@
+{
+    "skills": [
+        {
+            "title": "COBOL",
+            "imagePath": "/server.png",
+            "alt": "server"
+        },
+        {
+            "title": "NodeJS",
+            "imagePath": "https://www.pikpng.com/pngl/b/430-4309640_js-logo-nodejs-logo-clipart.png",
+            "alt": "NodeJS logo"
+        },
+        {
+            "title": "Typescript",
+            "imagePath": "https://pbs.twimg.com/profile_images/1149708719178993664/3Hb8W4aX.png",
+            "alt": "Typescript logo"
+        },
+        {
+            "title": "React",
+            "imagePath": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png",
+            "alt": "React logo"
+        },
+        {
+            "title": "Next.js",
+            "imagePath": "https://pbs.twimg.com/profile_images/1252531684353998848/6R0-p1Vf_400x400.jpg",
+            "alt": "Next.js logo"
+        },
+        {
+            "title": "Google Cloud",
+            "imagePath": "https://cloud.google.com/images/social-icon-google-cloud-1200-630.png",
+            "alt": "Google Cloud Platform logo"
+        },
+        {
+            "title": "CI/CD",
+            "imagePath": "/cicd.png",
+            "alt": "green checkmark"
+        },
+        {
+            "title": "Python",
+            "imagePath": "/python.png",
+            "alt": "Python logo"
+        }
+    ]
+}
