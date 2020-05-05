@@ -33,7 +33,7 @@ export default () => {
                 </button>
             </div>
             <ul
-                className={`flex flex-col md:flex-row justify-center py-2 w-full text-gray-700 shadow-md bg-gray-200 fixed z-10 border-t-4 border-indigo-500
+                className={`flex flex-col md:flex-row justify-center py-2 w-full md:fixed text-gray-700 shadow-md bg-gray-200 z-10 border-t-4 border-indigo-500
                 ${expanded ? "show-nav" : "hide-nav"}`}
             >
                 <Link href="/">

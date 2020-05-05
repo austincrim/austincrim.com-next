@@ -14,10 +14,7 @@ const Index = ({ skills }) => {
             <Hero />
             <Section primary title="Tools I Have Used" id="skills">
                 <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-10">
-                    {skills.map((skill, index) => {
-                        return <Skill title={skill.title} image={skill.imagePath} alt={skill.alt} key={index} />
-                    })
-                    }
+                    {skills.map((skill, index) => <Skill title={skill.title} image={skill.imagePath} alt={skill.alt} key={index} />)}
                 </div>
             </Section>
             <Section title="Things I Have Built" id="portfolio">

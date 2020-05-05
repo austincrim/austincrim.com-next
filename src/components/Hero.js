@@ -19,9 +19,11 @@ const Hero = () => {
                     <button className="btn primary-btn">
                         Download Resume
                     </button>
-                    <button className="btn secondary-btn">
-                        Contact Me
-                    </button>
+                    <a href="#contact">
+                        <button className="btn secondary-btn">
+                            Contact Me
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
