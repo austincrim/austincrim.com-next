@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 const Hero = () => {
     return (
@@ -16,13 +17,13 @@ const Hero = () => {
                     <br />Welcome to my portfolio.
                 </h2>
                 <div className="mt-4">
-                    <button className="btn primary-btn">
+                    <Button primary>
                         Download Resume
-                    </button>
+                    </Button>
                     <a href="#contact">
-                        <button className="btn secondary-btn">
+                        <Button secondary>
                             Contact Me
-                        </button>
+                        </Button>
                     </a>
                 </div>
             </div>
