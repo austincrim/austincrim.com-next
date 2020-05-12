@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import Section from "../components/Section";
 import Skill from "../components/Skill";
 import Footer from "../components/Footer";
+import PortfolioCard from '../components/PortfolioCard';
 
 const Index = ({ skills }) => {
     return (
@@ -18,14 +19,17 @@ const Index = ({ skills }) => {
                 </div>
             </Section>
             <Section title="Things I Have Built" id="portfolio">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
-                nemo in, dolor beatae facilis ratione vel! Quaerat dolor dicta
-                nisi explicabo consequatur deleniti dolorum iusto! Quis esse
-                explicabo ullam a? Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Distinctio, neque! Porro quam cum tempore
-                illum inventore iure, sit provident doloremque optio sed
-                deserunt excepturi rerum facilis beatae labore dolorum
-                consequuntur.
+                <div className="grid gap-10">
+                    <PortfolioCard title="Lorem">
+                        lorem ipsum bla slkdflka asld f; fdal
+                    </PortfolioCard>
+                    <PortfolioCard>
+                        Lorem
+                    </PortfolioCard>
+                    <PortfolioCard>
+                        Lorem
+                    </PortfolioCard>
+                </div>
             </Section>
             <Section primary title="Want to Chat?" id="contact">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
@@ -43,10 +47,10 @@ const Index = ({ skills }) => {
 };
 
 export async function getStaticProps() {
-    const jsonSkills = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/skills.json')));
+    const { skills } = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/skills.json')));
     return {
         props: {
-            skills: jsonSkills.skills
+            skills
         }
     }
 }
