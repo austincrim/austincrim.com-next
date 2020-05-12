@@ -32,31 +32,32 @@ export default () => {
                     </svg>
                 </button>
             </div>
-            <ul
-                className={`flex flex-col md:flex-row justify-center py-2 w-full md:fixed text-gray-700 shadow-md bg-gray-200 z-10 border-t-4 border-indigo-500
+            <div
+                className={`flex flex-col md:flex-row justify-center py-2 w-full md:fixed text-gray-700 shadow-md bg-gray-100 z-10 border-t-4 border-indigo-500
                 ${expanded ? "show-nav" : "hide-nav"}`}
             >
                 <Link href="/">
                     <a className="nav-item">
-                        <li>Home</li>
+                        Home
                     </a>
                 </Link>
                 <Link href="#skills">
                     <a className="nav-item">
-                        <li>Skills</li>
+                        Skills
                     </a>
                 </Link>
                 <Link href="#portfolio">
                     <a className="nav-item">
-                        <li>Portfolio</li>
+                        Portfolio
                     </a>
                 </Link>
                 <Link href="#contact">
                     <a className="nav-item">
-                        <li>Contact</li>
+                        Contact
                     </a>
                 </Link>
-                {/* <Link href="/blog">
+            </div>
+            {/* <Link href="/blog">
           <a>
             <li>Blog</li>
           </a>
@@ -66,7 +67,6 @@ export default () => {
             <li>Compose</li>
           </a>
         </Link> */}
-            </ul>
         </nav>
     );
 };
