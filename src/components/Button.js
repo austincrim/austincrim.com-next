@@ -10,10 +10,10 @@ const Button = (props) => {
     }
 
     return (
-        <button className={classes}>
-            {props.children}
+      <button type='button' className={classes}>
+          {props.children}
         </button>
     );
-}
+};
 
 export default Button;
