@@ -1,0 +1,16 @@
+{
+    "projects": [
+        {
+            "title": "Todo List",
+            "description": "A simple todo list I created to learn Svelte."
+        },
+        {
+            "title": "Pong",
+            "description": "A working copy of the arcade classic written in JavaScript using an HTML5 canvas."
+        },
+        {
+            "title": "This Website",
+            "description": "I designed and developed this portfolio page. It uses Next.js and TailwindCSS."
+        }
+    ]
+}
