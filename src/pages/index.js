@@ -26,7 +26,7 @@ const Index = ({ skills, projects }) => (
         </Section>
         <Section title='Things I Have Built' id='portfolio'>
             <div className='grid gap-10'>
-                {projects.map((project, index) => <ProjectCard title={project.title} image={project.imagePath} repoUrl={project.repoUrl} key={index}>{project.description}</ProjectCard>)}
+                {projects.map((project, index) => <ProjectCard project={project} key={index}>{project.description}</ProjectCard>)}
             </div>
         </Section>
         <Section primary title='Want to Chat?' id='contact'>
