@@ -2,7 +2,9 @@
     "projects": [
         {
             "title": "Todo List",
-            "description": "A simple todo list I created to learn Svelte."
+            "description": "A simple todo list app I created to learn Svelte.",
+            "imagePath": "/todo.jpg",
+            "repoUrl": "https://github.com/austincrim/tailwind-svelte"
         },
         {
             "title": "Pong",
