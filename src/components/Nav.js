@@ -8,7 +8,7 @@ export default () => {
       <nav>
           <div className='flex justify-end bg-gray-200'>
               <button
-                  className='m-4 hide-hamburger'
+                  className='m-4 md:hidden'
                   onClick={() => setExpanded(!expanded)}
                 >
                   <svg className='text-current text-gray-700' viewBox='0 0 100 80' width='40' height='40'>
@@ -33,8 +33,8 @@ export default () => {
                 </button>
             </div>
           <div
-              className={`flex flex-col md:flex-row justify-center py-2 w-full md:fixed text-gray-700 shadow-md bg-gray-100 z-10 border-t-4 border-indigo-500
-                ${expanded ? 'show-nav' : 'hide-nav'}`}
+              className={`${expanded ? 'flex flex-col' : 'hidden'} md:flex md:flex-row justify-center py-2 w-full md:fixed text-gray-700 shadow-md bg-gray-100 z-10 border-t-4 border-indigo-500
+                `}
             >
               <Link href='/'>
                   <a className='nav-item'>
