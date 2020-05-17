@@ -2,42 +2,42 @@
     "skills": [
         {
             "title": "COBOL",
-            "imagePath": "/server.png",
+            "imagePath": "/images/server.png",
             "alt": "server"
         },
         {
             "title": "NodeJS",
-            "imagePath": "/node.png",
+            "imagePath": "/images/node.png",
             "alt": "NodeJS logo"
         },
         {
             "title": "Typescript",
-            "imagePath": "/typescript.png",
+            "imagePath": "/images/typescript.png",
             "alt": "Typescript logo"
         },
         {
             "title": "React",
-            "imagePath": "/react.png",
+            "imagePath": "/images/react.png",
             "alt": "React logo"
         },
         {
             "title": "Next.js",
-            "imagePath": "/next.jpg",
+            "imagePath": "/images/next.jpg",
             "alt": "Next.js logo"
         },
         {
             "title": "Google Cloud",
-            "imagePath": "/gcp.png",
+            "imagePath": "/images/gcp.png",
             "alt": "Google Cloud Platform logo"
         },
         {
             "title": "CI/CD",
-            "imagePath": "/cicd.png",
+            "imagePath": "/images/cicd.png",
             "alt": "green checkmark"
         },
         {
             "title": "Python",
-            "imagePath": "/python.png",
+            "imagePath": "/images/python.png",
             "alt": "Python logo"
         }
     ]

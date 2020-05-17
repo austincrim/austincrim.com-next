@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Button = (props) => {
-    let classes = 'btn py-2 px-4 rounded hover:shadow-md active:duration-75 active:shadow-none transition-all duration-150 ease-in';
+    let classes = 'btn py-2 px-4 rounded transition-all duration-150 ease-in hover:shadow-md active:duration-75 active:shadow-none';
 
     if (props.primary) {
         classes += ' bg-indigo-600 text-gray-200 hover:bg-indigo-700';

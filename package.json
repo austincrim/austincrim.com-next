@@ -14,7 +14,6 @@
   "author": "Austin Crim",
   "license": "ISC",
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9.7.6",
     "dompurify": "^2.0.11",
     "isomorphic-unfetch": "^3.0.0",
@@ -28,7 +27,6 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "postcss-preset-env": "^6.7.0",

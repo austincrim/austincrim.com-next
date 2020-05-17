@@ -1,6 +1,12 @@
 {
     "projects": [
         {
+            "title": "Pong",
+            "description": "A working copy of the arcade classic written in JavaScript using an HTML5 canvas.",
+            "repoUrl": "https://github.com/austincrim/pong",
+            "appUrl": "https://pong.austcrim.now.sh/"
+        },
+        {
             "title": "Todo List",
             "description": "A simple todo list app I created to learn Svelte.",
             "imagePath": "/todo.jpg",
@@ -8,14 +14,8 @@
             "appUrl": "https://tailwind-svelte-todo.austcrim.now.sh/"
         },
         {
-            "title": "Pong",
-            "description": "A working copy of the arcade classic written in JavaScript using an HTML5 canvas.",
-            "repoUrl": "https://github.com/austincrim/pong.git",
-            "appUrl": "https://pong.austcrim.now.sh/"
-        },
-        {
             "title": "This Website",
-            "description": "I designed and developed this portfolio page. It uses Next.js and TailwindCSS.",
+            "description": "I designed and developed this portfolio page using Next.js and TailwindCSS.",
             "repoUrl": "https://github.com/austincrim/next-personal-site"
         }
     ]
