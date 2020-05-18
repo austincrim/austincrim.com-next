@@ -6,7 +6,7 @@ export default () => {
 
     return (
         <nav>
-            <div className='flex justify-end bg-gray-200'>
+            <div className='flex justify-end bg-gray-100'>
                 <button
                     className='m-4 md:hidden'
                     onClick={() => setExpanded(!expanded)}

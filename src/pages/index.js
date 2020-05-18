@@ -30,7 +30,20 @@ const Index = ({ skills, projects }) => (
             </div>
         </Section>
         <Section primary title='Want to Chat?' id='contact'>
-            
+            <div className='flex flex-col md:flex-row mx-auto justify-center w-5/6'>
+                <div className='p-4 text-center'>
+                    <div className='w-1/2 md:w-auto mx-auto text-gray-700 font-semibold text-lg border-b border-b border-indigo-400'>Phone</div>
+                    <div className='mt-1'>(515) 203-7127</div>
+                </div>
+                <div className='p-4 text-center'>
+                    <div className='w-1/2 md:w-auto mx-auto text-gray-700 font-semibold text-lg border-b border-indigo-400'>Email</div>
+                    <div className='mt-1'>aust.crim@gmail.com</div>
+                </div>
+                <div className='p-4 text-center'>
+                    <div className='w-1/2 md:w-auto mx-auto text-gray-700 font-semibold text-lg border-b border-indigo-400'>LinkedIn</div>
+                    <div className='mt-1'>Austin Crim | Profile</div>
+                </div>
+            </div>
         </Section>
 
         <Footer>Designed and developed by Austin Crim</Footer>
