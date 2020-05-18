@@ -15,7 +15,7 @@ const PortfolioCard = ({ project, children }) => {
                     {repoUrl ?
                         <a href={repoUrl}>
                             <Button dark>
-                                <img className='inline mr-2' src='/images/github-logo.png' />
+                                <img className='inline mr-2' src='/images/github-logo.png' alt='github logo'/>
                                 View Source
                             </Button>
                         </a>
