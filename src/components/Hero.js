@@ -7,7 +7,7 @@ const Hero = () => (
             <h1 className='text-4xl'>
                 Hi, I'm
                 {' '}
-                <span className='text-indigo-400 font-semibold tracking-wide'>
+                <span className='text-teal-400 font-semibold tracking-wide'>
                     Austin Crim
                 </span>
               ,

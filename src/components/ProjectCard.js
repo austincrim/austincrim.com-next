@@ -3,7 +3,7 @@ import Button from './Button';
 const PortfolioCard = ({ project, children }) => {
     const { title, repoUrl, appUrl, image } = project;
     return (
-        <div className='flex w-full p-4 bg-indigo-200 text-gray-800 rounded shadow-md'>
+        <div className='flex w-full p-4 bg-teal-200 text-gray-800 rounded shadow-md'>
             <div className='flex flex-col'>
                 <div className='text-xl font-semibold tracking-wider'>
                     {title}

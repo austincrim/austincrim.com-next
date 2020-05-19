@@ -33,7 +33,7 @@ export default () => {
                 </button>
             </div>
             <div
-                className={`${expanded ? 'flex flex-col' : 'hidden'} md:flex md:flex-row justify-center py-2 w-full md:fixed text-gray-700 shadow-md bg-gray-100 z-10 border-t-4 border-indigo-500
+                className={`${expanded ? 'flex flex-col' : 'hidden'} md:flex md:flex-row justify-center py-2 w-full md:fixed text-gray-700 shadow-md bg-gray-100 z-10 border-t-4 border-teal-500
                 `}
             >
                 <Link href='/'>
