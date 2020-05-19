@@ -41,7 +41,7 @@ const Index = ({ skills, projects }) => (
                 </div>
                 <div className='p-4 text-center'>
                     <div className='w-1/2 md:w-auto mx-auto text-gray-700 font-semibold text-lg border-b border-indigo-400'>LinkedIn</div>
-                    <div className='mt-1'>Austin Crim | Profile</div>
+                    <div className='mt-1 text-blue-700 hover:text-blue-500 '><a href='https://www.linkedin.com/in/austin-crim'>Austin Crim | Profile</a></div>
                 </div>
             </div>
         </Section>
