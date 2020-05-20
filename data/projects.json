@@ -7,6 +7,11 @@
             "appUrl": "https://pong.austcrim.now.sh/"
         },
         {
+            "title": "SMS Recipe Generator",
+            "description": "Text ingredients and receive recipes. Built for the DEV.to x Twilio hackathon.",
+            "repoUrl": "https://github.com/austincrim/dev-to-twilio"
+        },
+        {
             "title": "Todo List",
             "description": "A simple todo list app I created to learn Svelte.",
             "imagePath": "/todo.jpg",
