@@ -6,7 +6,7 @@ export default () => {
 
     return (
         <nav>
-            <div className='flex justify-end bg-gray-100'>
+            <div className='flex justify-end bg-gray-100 shadow-md'>
                 <button
                     className='m-4 md:hidden'
                     onClick={() => setExpanded(!expanded)}
@@ -15,19 +15,19 @@ export default () => {
                         <rect
                             rx='8'
                             width='100'
-                            height='10'
+                            height='5'
                         />
                         <rect
                             rx='8'
                             y='30'
                             width='100'
-                            height='10'
+                            height='5'
                         />
                         <rect
                             rx='8'
                             y='60'
                             width='100'
-                            height='10'
+                            height='5'
                         />
                     </svg>
                 </button>
