@@ -19,7 +19,7 @@ const Hero = () => (
                 Welcome to my portfolio.
             </h2>
             <div className="mt-4 space-x-4">
-                <Button primary>Download Resume</Button>
+                <Button primary>Download Resume (todo)</Button>
                 <a href="#contact">
                     <Button secondary>Contact Me</Button>
                 </a>
