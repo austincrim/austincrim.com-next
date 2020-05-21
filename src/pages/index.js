@@ -71,9 +71,9 @@ const Index = ({ skills, projects }) => (
                         <svg
                             className="h-6 my-2 mx-auto text-gray-500"
                             fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                         >
@@ -88,9 +88,9 @@ const Index = ({ skills, projects }) => (
                         <svg
                             className="h-6 my-2 mx-auto text-gray-500"
                             fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                         >
