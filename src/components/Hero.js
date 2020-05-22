@@ -19,7 +19,9 @@ const Hero = () => (
                 Welcome to my portfolio.
             </h2>
             <div className="mt-4 space-x-4">
-                <Button primary>Download Resume (todo)</Button>
+                <a href='/Austin Crim Resume.pdf' download>
+                    <Button primary>Download Resume</Button>
+                </a>
                 <a href="#contact">
                     <Button secondary>Contact Me</Button>
                 </a>
