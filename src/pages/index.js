@@ -11,6 +11,15 @@ import ProjectCard from '../components/ProjectCard';
 const Index = ({ skills, projects }) => (
     <>
         <Head>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167699477-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)}
+                gtag('js', new Date());
+
+                gtag('config', 'UA-167699477-1');
+            </script>
+
             <title>Austin Crim - Web Developer Portfolio</title>
             <meta
                 name="viewport"
