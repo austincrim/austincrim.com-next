@@ -12,7 +12,7 @@ const PostPreview = ({ post }) => {
     };
 
     return (
-        <div className='w-auto inline-flex m-8 p-6 bg-gray-100 rounded-lg shadow-md border-b-4 border-teal-300'>
+        <div className='w-auto m-8 p-6 bg-gray-100 rounded-lg shadow-md border-b-4 border-teal-300'>
             <Link href={`/p/${post._id}`}>
                 <a>
                     <h4 className='text-lg font-mono font-bold'>
@@ -23,15 +23,6 @@ const PostPreview = ({ post }) => {
                     </div>
                 </a>
             </Link>
-            <div>
-                <button
-                    href='#'
-                    onClick={() => deletePost(post._id)}
-                    className='ml-4 mt-12 text-gray-700 text-sm hover:text-red-500'
-                >
-                    Delete
-                </button>
-            </div>
         </div>
     );
 };
