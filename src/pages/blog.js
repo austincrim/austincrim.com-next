@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
-import Nav from '../components/Nav';
 import PostPreview from '../components/PostPreview';
+import BlogNav from '../components/BlogNav';
 
 const Blog = ({ posts }) => {
     const sortPosts = (array) => {
@@ -18,8 +17,8 @@ const Blog = ({ posts }) => {
 
     return (
         <div>
-            <Nav />
-            <div className='flex flex-col max-w-4xl mt-24 mx-auto px-6 py-12 bg-gray-200 md:rounded-lg'>
+            <BlogNav />
+            <div className='flex flex-col max-w-4xl mt-16 mx-auto px-6 py-12 bg-gray-200 md:rounded-lg'>
                 <h3 className='ml-8 text-4xl text-teal-600 font-sans'>Posts</h3>
                 {posts ? (
                     sortPosts(posts).map((post) => (
