@@ -16,12 +16,13 @@
     "dompurify": "^2.0.11",
     "gray-matter": "^4.0.2",
     "isomorphic-unfetch": "^3.0.0",
-    "marked": "^0.8.2",
     "next": "^9.4.0",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-nextjs-toast": "^1.0.7"
+    "react-nextjs-toast": "^1.0.7",
+    "remark": "^12.0.0",
+    "remark-html": "^11.0.2"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",

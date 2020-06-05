@@ -66,16 +66,15 @@ body {
 }
 
 .post-content p {
-    @apply mt-2;
+    @apply mt-2 leading-8;
 }
 
 .post-content a {
     @apply text-blue-500;
 }
 
-.post-content pre {
-    @apply w-full bg-gray-700 text-gray-100 p-4 my-2;
+.post-content a:hover {
+    @apply text-blue-700;
 }
-
 
 @tailwind utilities;
