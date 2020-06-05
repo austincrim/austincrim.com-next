@@ -1,28 +1,16 @@
 import PostPreview from '../components/PostPreview';
 import BlogNav from '../components/BlogNav';
+import { getSortedPostsData } from '../../lib/posts';
 
-const Blog = ({ posts }) => {
-    const sortPosts = (array) => {
-        array.sort((a, b) => {
-            if (a.dateAuthored > b.dateAuthored) {
-                return -1;
-            }
-            if (a.dateAuthored === b.dateAuthored) {
-                return 0;
-            }
-            return 1;
-        });
-        return array;
-    };
-
+const Blog = ({ allPostsData }) => {
     return (
         <div>
             <BlogNav />
             <div className='flex flex-col max-w-4xl mt-16 mx-auto px-6 py-12 bg-gray-200 md:rounded-lg'>
                 <h3 className='ml-8 text-4xl text-teal-600 font-sans'>Posts</h3>
-                {posts ? (
-                    sortPosts(posts).map((post) => (
-                        <PostPreview key={post._id} post={post} />
+                {allPostsData ? (
+                    allPostsData.map((post) => (
+                        <PostPreview key={post.id} post={post} />
                     ))
                 ) : (
                     <div className='ml-8 text-2xl text-gray-600'>
@@ -34,15 +22,24 @@ const Blog = ({ posts }) => {
     );
 };
 
+// export async function getStaticProps() {
+//     const response = await fetch(
+//         'https://austin-crim-blog-api.herokuapp.com/posts'
+//     );
+//     const posts = await response.json();
+
+//     return {
+//         props: {
+//             posts,
+//         },
+//     };
+// }
 export async function getStaticProps() {
-    const response = await fetch(
-        'https://austin-crim-blog-api.herokuapp.com/posts'
-    );
-    const posts = await response.json();
+    const allPostsData = getSortedPostsData();
 
     return {
         props: {
-            posts,
+            allPostsData
         },
     };
 }

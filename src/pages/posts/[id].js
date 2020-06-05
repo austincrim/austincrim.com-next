@@ -16,7 +16,7 @@ const Post = (props) => {
                 <div className='flex justify-between items-center border-b border-indigo-200'>
                     <h3 className='text-3xl text-teal-600 inline'>{props.post.title}</h3>
                     <span className='text-gray-600'>
-                        {new Date(props.post.dateAuthored).toLocaleDateString()}
+                        {new Date(props.post.date).toLocaleDateString()}
                     </span>
                 </div>
                 <div
