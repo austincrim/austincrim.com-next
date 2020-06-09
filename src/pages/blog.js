@@ -22,18 +22,6 @@ const Blog = ({ allPostsData }) => {
     );
 };
 
-// export async function getStaticProps() {
-//     const response = await fetch(
-//         'https://austin-crim-blog-api.herokuapp.com/posts'
-//     );
-//     const posts = await response.json();
-
-//     return {
-//         props: {
-//             posts,
-//         },
-//     };
-// }
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
 
