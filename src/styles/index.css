@@ -69,6 +69,14 @@ body {
     @apply mt-2 leading-8;
 }
 
+.post-content li {
+    @apply list-inside list-disc;
+}
+
+.post-content code {
+    @apply bg-gray-800 text-gray-100 rounded p-1;
+}
+
 .post-content a {
     @apply text-blue-500;
 }
