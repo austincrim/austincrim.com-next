@@ -7,6 +7,12 @@
             "appUrl": "https://pong.austcrim.now.sh/"
         },
         {
+            "title": "Basic Twitter Clone",
+            "description": "A fullstack Next.js app that allows users to post tweets. Uses TailwindCSS, react-query, and MongoDB",
+            "repoUrl": "https://github.com/austincrim/twitter-clone",
+            "appUrl": "https://twitter-clone-austincrim.vercel.app/"
+        },
+        {
             "title": "SMS Recipe Generator",
             "description": "Text ingredients and receive recipes. Built for the DEV.to x Twilio hackathon.",
             "repoUrl": "https://github.com/austincrim/dev-to-twilio"
