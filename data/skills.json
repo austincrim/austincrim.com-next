@@ -1,9 +1,14 @@
 {
     "skills": [
         {
-            "title": "COBOL",
-            "imagePath": "/images/server.png",
-            "alt": "server"
+            "title": "React",
+            "imagePath": "/images/react.png",
+            "alt": "React logo"
+        },
+        {
+            "title": "Next.js",
+            "imagePath": "/images/next.jpg",
+            "alt": "Next.js logo"
         },
         {
             "title": "NodeJS",
@@ -16,14 +21,9 @@
             "alt": "Typescript logo"
         },
         {
-            "title": "React",
-            "imagePath": "/images/react.png",
-            "alt": "React logo"
-        },
-        {
-            "title": "Next.js",
-            "imagePath": "/images/next.jpg",
-            "alt": "Next.js logo"
+            "title": "COBOL",
+            "imagePath": "/images/server.png",
+            "alt": "server"
         },
         {
             "title": "Google Cloud",

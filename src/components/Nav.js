@@ -6,7 +6,7 @@ const Nav = () => {
 
     return (
         <nav>
-            <div className='flex justify-end bg-gray-100 shadow-md'>
+            <div className='flex justify-end shadow-md'>
                 <button
                     className='m-4 md:hidden'
                     onClick={() => setExpanded(!expanded)}
@@ -26,7 +26,7 @@ const Nav = () => {
             <div
                 className={`${
                     expanded ? 'flex flex-col' : 'hidden'
-                } md:flex md:flex-row justify-center py-2 w-full md:fixed text-gray-700 shadow-md bg-gray-100 z-10 border-t-4 border-teal-500
+                } md:flex md:flex-row justify-center py-2 w-full md:fixed text-gray-700 shadow-md bg-white z-10 border-t-4 border-teal-500
                 `}
             >
                 <Link href='/'>

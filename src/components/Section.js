@@ -1,6 +1,6 @@
 const Section = (props) => {
     const colorStyle = props.primary
-        ? 'bg-gray-200 text-gray-700'
+        ? 'bg-gray-50 text-gray-700'
         : 'bg-gray-700 text-gray-300';
 
     return (
@@ -11,7 +11,7 @@ const Section = (props) => {
             <div className="max-w-6xl mx-auto">
                 <h2
                     className={`text-3xl font-semibold mb-6 text-center md:text-left ${
-                        props.primary ? 'text-teal-600' : 'text-teal-300'
+                        props.primary ? 'text-teal-700' : 'text-teal-200'
                     }`}
                 >
                     {props.title}

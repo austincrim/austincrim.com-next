@@ -3,17 +3,17 @@ import Button from './Button';
 const Hero = () => (
     <div
         id="hero"
-        className="w-full mx-auto md:pt-24 pt-10 pb-10 text-gray-700"
+        className="w-full pt-10 pb-10 mx-auto text-gray-700 md:pt-24"
     >
-        <div className="text-center w-full md:w-2/3 mx-auto px-4 py-8 bg-gray-100 md:rounded shadow-xl">
+        <div className="w-full px-4 py-8 mx-auto text-center bg-white shadow-xl md:w-2/3 md:rounded">
             <h1 className="text-4xl">
                 Hi, I'm&nbsp;
-                <span className="text-teal-400 font-semibold tracking-wide">
+                <span className="font-semibold tracking-wide text-teal-400">
                     Austin Crim
                 </span>
                 ,
             </h1>
-            <h2 className="text-3xl font-light">
+            <h2 className="mt-2 text-3xl font-light">
                 a full-stack web developer.
                 <br />
                 Welcome to my portfolio.

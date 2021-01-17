@@ -9,7 +9,7 @@ const Button = (props) => {
     } else if (props.dark) {
         classes += ' bg-gray-800 text-gray-200 hover:bg-gray-900';
     } else if (props.light) {
-        classes += ' bg-gray-200 text-gray-800 hover:bg-gray-300';
+        classes += ' bg-white text-gray-800 hover:bg-gray-100';
     }
 
     return (
