@@ -26,7 +26,7 @@ const Index = ({ skills, projects }) => (
         <Hero />
 
         <Section primary title='Tools I Have Used' id='skills'>
-            <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-10'>
+            <div className='grid grid-cols-2 gap-10 lg:grid-cols-4 md:grid-cols-3'>
                 {skills.map((skill, index) => (
                     <SkillCard
                         title={skill.title}
@@ -47,12 +47,12 @@ const Index = ({ skills, projects }) => (
             </div>
         </Section>
         <Section primary title='Want to Chat?' id='contact'>
-            <div className='flex flex-col md:flex-row mx-auto justify-around w-5/6'>
+            <div className='flex flex-col justify-around w-5/6 mx-auto md:flex-row'>
                 <div className='p-4 text-center'>
-                    <div className='w-1/2 md:w-auto mx-auto text-gray-700 font-semibold text-lg'>
+                    <div className='w-1/2 mx-auto text-lg font-semibold text-gray-700 md:w-auto'>
                         Phone
                         <svg
-                            className='h-6 my-2 mx-auto text-gray-500'
+                            className='h-6 mx-auto my-2 text-gray-500'
                             fill='none'
                             strokeLinecap='round'
                             strokeLinejoin='round'
@@ -66,10 +66,10 @@ const Index = ({ skills, projects }) => (
                     <div className='mt-1'>(515) 203-7127</div>
                 </div>
                 <div className='p-4 text-center'>
-                    <div className='w-1/2 md:w-auto mx-auto text-gray-700 font-semibold text-lg'>
+                    <div className='w-1/2 mx-auto text-lg font-semibold text-gray-700 md:w-auto'>
                         Email
                         <svg
-                            className='h-6 my-2 mx-auto text-gray-500'
+                            className='h-6 mx-auto my-2 text-gray-500'
                             fill='none'
                             strokeLinecap='round'
                             strokeLinejoin='round'
@@ -83,10 +83,10 @@ const Index = ({ skills, projects }) => (
                     <div className='mt-1'>aust.crim@gmail.com</div>
                 </div>
                 <div className='p-4 text-center'>
-                    <div className='w-1/2 md:w-auto mx-auto text-gray-700 font-semibold text-lg'>
+                    <div className='w-1/2 mx-auto text-lg font-semibold text-gray-700 md:w-auto'>
                         LinkedIn
                         <svg
-                            className='h-6 my-2 mx-auto text-gray-500'
+                            className='h-6 mx-auto my-2 text-gray-500'
                             fill='none'
                             strokeLinecap='round'
                             strokeLinejoin='round'
