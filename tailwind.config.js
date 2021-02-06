@@ -1,17 +1,9 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
     purge: ['./src/**/*.js'],
-    theme: {
-        extend: {
-            colors: {
-                teal: colors.teal,
-            },
-        },
-    },
     variants: {
         extend: {
-            borderWidth: ['hover'],
+            translate: ['group-hover', 'active'],
+            boxShadow: ['active']
         },
     },
     plugins: [require('@tailwindcss/typography')],

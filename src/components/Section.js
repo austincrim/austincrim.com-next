@@ -1,19 +1,11 @@
 const Section = (props) => {
-    const colorStyle = props.primary
-        ? 'bg-gray-50 text-gray-700'
-        : 'bg-gray-700 text-gray-300';
-
     return (
         <div
             id={props.id}
-            className={`w-full leading-loose px-10 py-12 ${colorStyle}`}
+            className='w-full py-12 leading-loose text-gray-700'
         >
-            <div className="max-w-6xl mx-auto">
-                <h2
-                    className={`text-3xl font-semibold mb-6 text-center md:text-left ${
-                        props.primary ? 'text-teal-700' : 'text-teal-200'
-                    }`}
-                >
+            <div className='max-w-6xl mx-auto'>
+                <h2 className='mb-6 text-3xl font-semibold text-center text-blue-800 md:text-left'>
                     {props.title}
                 </h2>
                 {props.children}

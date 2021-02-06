@@ -1,29 +1,59 @@
 import Button from './Button';
 
 const Hero = () => (
-    <div
-        id="hero"
-        className="w-full pt-10 pb-10 mx-auto text-gray-700 md:pt-24"
-    >
-        <div className="w-full px-4 py-8 mx-auto text-center bg-white shadow-xl md:w-2/3 md:rounded">
-            <h1 className="text-4xl">
-                Hi, I'm&nbsp;
-                <span className="font-semibold tracking-wide text-teal-400">
-                    Austin Crim
-                </span>
-                ,
-            </h1>
-            <h2 className="mt-2 text-3xl font-light">
-                a full-stack web developer.
-                <br />
-                Welcome to my portfolio.
-            </h2>
-            <div className="mt-4 space-x-4">
-                <a href='/Austin Crim Resume.pdf' download>
-                    <Button primary>Download Resume</Button>
+    <div className='my-28'>
+        <div className='flex justify-between'>
+            <div className='flex flex-col md:w-2/3 '>
+                <h1 className='text-5xl'>
+                    Hi, I'm&nbsp;
+                    <span className='tracking-wide text-transparent bg-gradient-to-tr from-blue-400 to-blue-800 bg-clip-text'>
+                        Austin Crim
+                    </span>
+                </h1>
+                <h2 className='max-w-lg my-4 text-3xl font-light'>
+                    a developer that's passionate about building great
+                    experiences on the web.
+                </h2>
+            </div>
+            <div className='flex flex-col items-start justify-center space-y-4'>
+                <a
+                    className='text-lg font-semibold text-blue-800 transition-colors hover:text-blue-500 group'
+                    href='/Austin Crim Resume.pdf'
+                    download
+                >
+                    <span className='mr-1'>Download Resume</span>
+                    <svg
+                        fill='currentColor'
+                        className='inline-block align-middle transition-transform transform group-hover:translate-x-1'
+                        height='16'
+                        width='16'
+                        viewBox='0 0 512 512'
+                    >
+                        <path
+                            d='M322.7,128.4L423,233.4c6,5.8,9,13.7,9,22.4c0,8.7-3,16.5-9,22.4L322.7,383.6c-11.9,12.5-31.3,12.5-43.2,0
+	c-11.9-12.5-11.9-32.7,0-45.2l48.2-50.4h-217C93.7,288,80,273.7,80,256c0-17.7,13.7-32,30.6-32h217l-48.2-50.4
+	c-11.9-12.5-11.9-32.7,0-45.2C291.4,115.9,310.7,115.9,322.7,128.4z'
+                        ></path>
+                    </svg>
                 </a>
-                <a href="#contact">
-                    <Button secondary>Contact Me</Button>
+                <a
+                    className='text-lg font-semibold text-blue-800 transition-colors hover:text-blue-500 group'
+                    href='#contact'
+                >
+                    <span class="mr-1">Say Hi</span>
+                    <svg
+                        fill='currentColor'
+                        className='inline-block align-middle transition-transform transform group-hover:translate-x-1'
+                        height='16'
+                        width='16'
+                        viewBox='0 0 512 512'
+                    >
+                        <path
+                            d='M322.7,128.4L423,233.4c6,5.8,9,13.7,9,22.4c0,8.7-3,16.5-9,22.4L322.7,383.6c-11.9,12.5-31.3,12.5-43.2,0
+	c-11.9-12.5-11.9-32.7,0-45.2l48.2-50.4h-217C93.7,288,80,273.7,80,256c0-17.7,13.7-32,30.6-32h217l-48.2-50.4
+	c-11.9-12.5-11.9-32.7,0-45.2C291.4,115.9,310.7,115.9,322.7,128.4z'
+                        ></path>
+                    </svg>
                 </a>
             </div>
         </div>
