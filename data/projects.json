@@ -4,7 +4,7 @@
             "title": "Notarize",
             "description": "A Markdown note taking app that saves to local storage",
             "repoUrl": "https://github.com/austincrim/notarize",
-            "appUrl": "https://notarize.netlify.app/"
+            "appUrl": "https://notarize-svelte.netlify.app/"
         },
         {
             "title": "Twitter Clone",
