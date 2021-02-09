@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 import fs from 'fs';
 import path from 'path';
 import { getSortedPostsData } from '../lib/posts';
@@ -48,7 +48,12 @@ function Index({ projects, posts }) {
                                     <Mail />
                                 </div>
                             </div>
-                            <a href='mailto:aust.crim@gmail.com' className='mt-1'>aust.crim@gmail.com</a>
+                            <a
+                                href='mailto:aust.crim@gmail.com'
+                                className='mt-1'
+                            >
+                                aust.crim@gmail.com
+                            </a>
                         </div>
                         <div className='p-4 text-center'>
                             <div className='w-1/2 mx-auto text-lg font-semibold md:w-auto'>

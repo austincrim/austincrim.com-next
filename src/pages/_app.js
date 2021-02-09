@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
             <Head>
                 <title>Austin Crim - Web Developer</title>
             </Head>
-            <Component {...pageProps} />;
+            <Component {...pageProps} />
         </>
     );
 }
