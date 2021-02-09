@@ -1,5 +1,6 @@
 ---
 title: 'Quick CSS Transition Explainer'
+lede: 'Everything you need to get up and running with simple CSS transitions, explained through an embedded CodePen.'
 date: '2020-06-30'
 ---
 

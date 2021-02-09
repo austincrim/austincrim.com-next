@@ -1,5 +1,6 @@
 ---
 title: 'Recreating the macOS Mail User Interface'
+lede: 'A faithful mockup of the Big Sur macOS Mail application, whipped up in an evening using TailwindCSS'
 date: '2020-06-23'
 ---
 

@@ -1,9 +1,16 @@
-// import App from 'next/app'
 import '../styles/index.css';
 import '../styles/prism.css';
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />;
+    return (
+        <>
+            <Head>
+                <title>Austin Crim - Web Developer</title>
+            </Head>
+            <Component {...pageProps} />;
+        </>
+    );
 }
 
 // Only uncomment this method if you have blocking data requirements for
