@@ -1,5 +1,6 @@
 ---
 title: 'Rebuilding My Personal Site with Next.js and TailwindCSS'
+lede: 'The process and lessons learned from yet another portfolio rebuild. Tech stack talk and code snippets included!'
 date: '2020-05-28'
 ---
 

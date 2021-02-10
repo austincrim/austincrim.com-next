@@ -10,43 +10,8 @@ nav {
     font-family: "Rubik", sans-serif;
 }
 
-.nav-item {
-    @apply mx-8 p-2 rounded transition-colors duration-150 ease-out;
-}
-
-.nav-item:hover {
-    @apply bg-gray-300;
-}
-
-.nav-item:active {
-    @apply bg-gray-400;
-}
-
 body {
     font-family: "Inter", sans-serif;
-    @apply bg-gray-800;
-}
-
-#hero {
-    background-image: linear-gradient(45deg, #c3fefb, #66dbeabd);
-    font-family: "Rubik", sans-serif;
-}
-
-.btn:hover {
-    transform: translateY(-1px);
-}
-
-.btn:active {
-    transform: translateY(2px);
-}
-
-.skill {
-    transition: transform .2s ease-in, box-shadow .2s ease-in;
-}
-
-.skill:hover {
-    @apply shadow-lg;
-    transform: translateY(-2px);
 }
 
 @tailwind utilities;

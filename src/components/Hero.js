@@ -1,29 +1,40 @@
 import Button from './Button';
+import RightArrow from './icons/RightArrow';
 
 const Hero = () => (
-    <div
-        id="hero"
-        className="w-full pt-10 pb-10 mx-auto text-gray-700 md:pt-24"
-    >
-        <div className="w-full px-4 py-8 mx-auto text-center bg-white shadow-xl md:w-2/3 md:rounded">
-            <h1 className="text-4xl">
-                Hi, I'm&nbsp;
-                <span className="font-semibold tracking-wide text-teal-400">
-                    Austin Crim
-                </span>
-                ,
-            </h1>
-            <h2 className="mt-2 text-3xl font-light">
-                a full-stack web developer.
-                <br />
-                Welcome to my portfolio.
-            </h2>
-            <div className="mt-4 space-x-4">
-                <a href='/Austin Crim Resume.pdf' download>
-                    <Button primary>Download Resume</Button>
+    <div className='my-28'>
+        <div className='flex flex-col justify-between space-y-14 md:items-end md:flex-row'>
+            <div className='flex flex-col md:w-2/3 '>
+                <h1 className='text-5xl'>
+                    Hi, I'm&nbsp;
+                    <span className='tracking-wide text-transparent bg-gradient-to-tr from-blue-400 to-blue-800 dark:to-blue-200 bg-clip-text whitespace-nowrap'>
+                        Austin Crim
+                    </span>
+                </h1>
+                <h2 className='max-w-lg mt-4 text-3xl font-light'>
+                    a developer that's passionate about building great
+                    experiences on the web.
+                </h2>
+            </div>
+            <div className='flex flex-col items-start justify-center space-y-4'>
+                <a
+                    className='text-lg font-semibold text-blue-800 transition-colors dark:text-blue-300 hover:text-blue-500 group'
+                    href='/Austin Crim Resume.pdf'
+                    download
+                >
+                    <span className='mr-1'>Download Resume</span>
+                    <span className='inline-block align-middle transition-transform transform group-hover:translate-x-1'>
+                        <RightArrow />
+                    </span>
                 </a>
-                <a href="#contact">
-                    <Button secondary>Contact Me</Button>
+                <a
+                    className='text-lg font-semibold text-blue-800 transition-colors dark:text-blue-300 hover:text-blue-500 group'
+                    href='#contact'
+                >
+                    <span className='mr-1'>Say Hi</span>
+                    <span className='inline-block align-middle transition-transform transform group-hover:translate-x-1'>
+                        <RightArrow />
+                    </span>
                 </a>
             </div>
         </div>

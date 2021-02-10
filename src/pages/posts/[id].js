@@ -1,42 +1,42 @@
-import BlogNav from '../../components/BlogNav';
+import * as React from 'react';
 import Prism from 'prismjs';
 import PrismJsx from 'prismjs/components/prism-jsx';
-import { useEffect } from 'react';
-import { getAllPostIds, getPostData } from '../../../lib/posts';
+import Layout from '../../components/Layout';
+import { getAllPostIds, getPostData } from '../../lib/posts';
 
 const Post = ({ postData }) => {
-
-    useEffect(() => {
+    React.useEffect(() => {
         Prism.highlightAll();
     }, []);
 
     return (
-        <>
-            <BlogNav />
-            <div className='my-16 p-10 max-w-4xl mx-auto text-gray-800 bg-gray-200 rounded-md'>
-                <article>
-                    <div className='flex justify-between items-end border-b border-indigo-200'>
-                        <h3 className='text-4xl text-teal-700 inline'>{postData.title}</h3>
-                        <span className='text-gray-600'>
-                            {new Date(postData.date).toLocaleDateString()}
-                        </span>
-                    </div>
+        <Layout>
+            <article className='flex flex-col justify-around max-w-4xl px-16 mx-auto my-20 space-y-10 dark:text-gray-100'>
+                <div className='flex flex-col space-y-4'>
+                    <h3 className='inline text-4xl'>{postData.title}</h3>
+                    <span className='text-gray-600 dark:text-gray-200'>
+                        {new Date(postData.date).toLocaleDateString()}
+                    </span>
+                </div>
+                <div className='max-w-4xl'>
                     <div
-                        className='mt-8 prose max-w-none'
-                        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+                        className='mt-8 prose text-gray-800 max-w-none dark:text-gray-100'
+                        dangerouslySetInnerHTML={{
+                            __html: postData.contentHtml,
+                        }}
                     />
-                </article>
-            </div>
-        </>
+                </div>
+            </article>
+        </Layout>
     );
-}
+};
 
 export async function getStaticPaths() {
     const paths = getAllPostIds();
     return {
         paths,
-        fallback: false
-    }
+        fallback: false,
+    };
 }
 
 export async function getStaticProps({ params }) {
@@ -44,9 +44,9 @@ export async function getStaticProps({ params }) {
 
     return {
         props: {
-            postData
-        }
-    }
+            postData,
+        },
+    };
 }
 
 export default Post;

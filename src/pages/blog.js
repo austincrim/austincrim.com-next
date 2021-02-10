@@ -1,24 +1,17 @@
 import PostPreview from '../components/PostPreview';
-import BlogNav from '../components/BlogNav';
-import { getSortedPostsData } from '../../lib/posts';
+import Layout from '../components/Layout';
+import { getSortedPostsData } from '../lib/posts';
 
 const Blog = ({ allPostsData }) => {
     return (
-        <div>
-            <BlogNav />
-            <div className='flex flex-col max-w-4xl mt-16 mx-auto px-6 py-12 bg-gray-200 md:rounded-lg'>
-                <h3 className='ml-8 text-4xl text-teal-600 font-sans'>Posts</h3>
-                {allPostsData ? (
-                    allPostsData.map((post) => (
-                        <PostPreview key={post.id} post={post} />
-                    ))
-                ) : (
-                    <div className='ml-8 text-2xl text-gray-600'>
-                        Loading...
-                    </div>
-                )}
+        <Layout>
+            <div className='flex flex-col max-w-4xl mx-auto mt-16 space-y-12 dark:text-gray-50 md:rounded-lg'>
+                <h3 className='text-4xl'>Posts</h3>
+                {allPostsData.map((post) => (
+                    <PostPreview key={post.id} post={post} />
+                ))}
             </div>
-        </div>
+        </Layout>
     );
 };
 
@@ -27,7 +20,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            allPostsData
+            allPostsData,
         },
     };
 }
