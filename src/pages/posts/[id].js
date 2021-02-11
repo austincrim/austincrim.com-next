@@ -12,10 +12,7 @@ const Post = ({ postData }) => {
 
     return (
         <Layout>
-            <article
-                id='article'
-                className='flex flex-col justify-around max-w-4xl px-16 mx-auto my-20 space-y-10 dark:text-gray-100'
-            >
+            <article className='flex flex-col justify-around max-w-4xl px-16 pb-16 mx-auto space-y-10 dark:text-gray-100'>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -34,7 +31,7 @@ const Post = ({ postData }) => {
                     className='max-w-4xl'
                 >
                     <div
-                        className='mt-8 prose text-gray-800 max-w-none dark:text-gray-100'
+                        className='mt-8 prose max-w-none dark:prose-light'
                         dangerouslySetInnerHTML={{
                             __html: postData.contentHtml,
                         }}
