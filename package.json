@@ -12,6 +12,7 @@
     "author": "Austin Crim",
     "license": "ISC",
     "dependencies": {
+        "framer-motion": "^3.3.0",
         "next": "^10.0.5",
         "prismjs": "^1.23.0",
         "react": "^17.0.1",

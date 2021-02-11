@@ -3,7 +3,7 @@ module.exports = {
     darkMode: 'class',
     variants: {
         extend: {
-            translate: ['group-hover', 'active'],
+            translate: ['group-hover', 'hover', 'active'],
             boxShadow: ['active']
         },
     },

@@ -2,8 +2,7 @@ import Button from './Button';
 import RightArrow from './icons/RightArrow';
 
 const Hero = () => (
-    <div className='my-28'>
-        <div className='flex flex-col justify-between space-y-14 md:items-end md:flex-row'>
+        <div className='flex flex-col justify-between my-20 space-y-14 md:items-end md:flex-row'>
             <div className='flex flex-col md:w-2/3 '>
                 <h1 className='text-5xl'>
                     Hi, I'm&nbsp;
@@ -36,7 +35,6 @@ const Hero = () => (
                         <RightArrow />
                     </span>
                 </a>
-            </div>
         </div>
     </div>
 );
