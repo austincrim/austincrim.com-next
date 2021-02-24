@@ -12,7 +12,7 @@ const Post = ({ postData }) => {
 
     return (
         <Layout>
-            <article className='flex flex-col justify-around max-w-4xl px-16 pb-16 mx-auto space-y-10 dark:text-gray-100'>
+            <article className='flex flex-col justify-around max-w-4xl pb-16 mx-auto space-y-10 md:px-16 dark:text-gray-100'>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
