@@ -40,7 +40,7 @@ function Index({ projects, posts }) {
                     </ul>
                 </Section>
                 <Section title='Want to Chat?' id='contact'>
-                    <div className='flex flex-col justify-around w-5/6 mx-auto text-gray-700 md:flex-row dark:text-gray-100'>
+                    <div className='grid grid-cols-2 mx-auto text-gray-700 dark:text-gray-100'>
                         <div className='p-4 text-center'>
                             <div className='w-1/2 mx-auto text-lg font-semibold md:w-auto'>
                                 Email
@@ -50,7 +50,7 @@ function Index({ projects, posts }) {
                             </div>
                             <a
                                 href='mailto:aust.crim@gmail.com'
-                                className='mt-1'
+                                className='mt-1 text-blue-800 transition-colors dark:text-blue-200 dark:hover:text-blue-300 hover:text-blue-500'
                             >
                                 aust.crim@gmail.com
                             </a>
@@ -62,7 +62,7 @@ function Index({ projects, posts }) {
                                     <LinkedInLogo />
                                 </div>
                             </div>
-                            <div className='mt-1 text-blue-800 transition-colors dark:text-blue-200 dark:hover:text-blue-300 hover:text-blue-500 '>
+                            <div className='mt-1 text-blue-800 transition-colors dark:text-blue-200 dark:hover:text-blue-300 hover:text-blue-500'>
                                 <a href='https://www.linkedin.com/in/austin-crim'>
                                     Profile
                                 </a>

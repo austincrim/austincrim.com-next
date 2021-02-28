@@ -3,10 +3,10 @@ import RightArrow from './icons/RightArrow';
 
 const Hero = () => (
         <div className='flex flex-col justify-between my-20 space-y-14 md:items-end md:flex-row'>
-            <div className='flex flex-col md:w-2/3 '>
+            <div className='flex flex-col md:w-2/3'>
                 <h1 className='text-5xl'>
-                    Hi, I'm&nbsp;
-                    <span className='tracking-wide text-transparent bg-gradient-to-tr from-blue-400 to-blue-800 dark:to-blue-200 bg-clip-text whitespace-nowrap'>
+                    <span>Hi, I'm&nbsp;</span>
+                    <span className='block tracking-wide text-transparent md:inline bg-gradient-to-tr from-blue-400 to-blue-800 dark:to-blue-200 bg-clip-text whitespace-nowrap'>
                         Austin Crim
                     </span>
                 </h1>
