@@ -16,14 +16,14 @@ My site is relatively simple, just a home page and a blog page. It's built on Ne
 ## Redesign Goals
 I began to grow tired of my previous design choices and decided my page needed a refresh. I had a few goals:
 - Simplify the home page
-- Introduce dark mode
+- Dark mode
 - Use a more muted color palette
-- Introduce subtle, tasteful animation
+- Introduce subtle, tasteful animations
 
 By the time I finished, I think I checked every box! I once read that "great design doesn't ask what it can add, but what it can take away" and I kept this in mind throughout development. I wanted to remove extraneous details and increase negative space, while including all relevant information in an easily digestible way.
 
 ## Dark Mode 🌙
-Adding dark mode has been something on my todo list for a long time, it's trendy, looks great, and provided a fun development challenge. In my implementation, I wanted to ensure that I respected OS level dark mode settings while allowing a user override to persist. I do something like this on page load to check for user preference from localstorage or the os:
+Adding dark mode has been something on my todo list for a long time, it's trendy, looks great, and provides a fun development challenge. In my implementation, I wanted to ensure that I respected OS level dark mode settings while allowing a user's choice to persist. I do something like this on page load to check for user preference from local storage or the os:
 ```javascript
 if (
     localStorage.theme === 'dark' ||
@@ -37,7 +37,7 @@ if (
     localStorage.theme = 'light';
 }
 ```
-On my toggle button I simply swap whatever is in localstorage.
+On my toggle button I simply swap whatever is in local storage.
 ```jsx
 <button
      onClick={() => {
