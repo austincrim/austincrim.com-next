@@ -19,7 +19,7 @@ const Post = ({ postData }) => {
                     transition={{ delay: 0.2 }}
                     className='flex flex-col space-y-4'
                 >
-                    <h3 className='inline pt-10 text-4xl'>{postData.title}</h3>
+                    <h1 className='inline pt-10 text-4xl'>{postData.title}</h1>
                     <span className='text-gray-600 dark:text-gray-200'>
                         {new Date(postData.date).toLocaleDateString()}
                     </span>

@@ -20,7 +20,9 @@ const Nav = () => {
                     </Link>
                 </div>
                 <div className='space-x-6'>
-                    <button onClick={() => {
+                    <button 
+                      aria-label="toggle dark mode"
+                    onClick={() => {
                         document.documentElement.classList.toggle('dark')
                         localStorage.theme ? localStorage.removeItem('theme') : localStorage.theme = 'dark'
                     }}>
@@ -29,12 +31,15 @@ const Nav = () => {
                         </div>
                     </button>
                     <a
+                        aria-label="austin crim's github profile"
                         href='https://github.com/austincrim'
                         className='inline-block w-8 h-8 transition-colors hover:text-gray-500 dark:hover:text-gray-400'
+                         aria
                     >
                         <GitHubLogo />
                     </a>
                     <a
+                        aria-label="austin crim's twitter profile"
                         href='https://twitter.com/crim_codes'
                         className='inline-block w-8 h-8 transition-colors hover:text-gray-500 dark:hover:text-gray-400'
                     >
