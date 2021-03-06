@@ -20,12 +20,15 @@ const Nav = () => {
                     </Link>
                 </div>
                 <div className='space-x-6'>
-                    <button 
-                      aria-label="toggle dark mode"
-                    onClick={() => {
-                        document.documentElement.classList.toggle('dark')
-                        localStorage.theme ? localStorage.removeItem('theme') : localStorage.theme = 'dark'
-                    }}>
+                    <button
+                        aria-label='toggle dark mode'
+                        onClick={() => {
+                            document.documentElement.classList.toggle('dark');
+                            localStorage.getItem('theme') === 'dark'
+                                ? (localStorage.theme = 'light')
+                                : (localStorage.theme = 'dark');
+                        }}
+                    >
                         <div className='w-8 h-8 transition-colors hover:text-gray-500 dark:hover:text-gray-400'>
                             <Moon />
                         </div>
@@ -34,7 +37,6 @@ const Nav = () => {
                         aria-label="austin crim's github profile"
                         href='https://github.com/austincrim'
                         className='inline-block w-8 h-8 transition-colors hover:text-gray-500 dark:hover:text-gray-400'
-                         aria
                     >
                         <GitHubLogo />
                     </a>
