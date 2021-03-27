@@ -10,9 +10,9 @@ const ProjectCard = ({ project, children }) => {
     return (
         <div className='flex flex-col justify-between py-8 space-y-8 text-gray-700 dark:text-gray-100 lg:flex-row '>
             <div className='flex flex-col'>
-                <div className='text-xl font-semibold tracking-wider'>
+                <h3 className='text-xl font-semibold tracking-wider'>
                     {title}
-                </div>
+                </h3>
                 <div className='max-w-xl mt-2'>{children}</div>
             </div>
 

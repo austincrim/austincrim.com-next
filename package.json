@@ -1,8 +1,9 @@
 {
     "name": "austin-crim-portfolio",
     "version": "1.0.0",
-    "description": "",
+    "description": "Personal site for Austin Crim",
     "main": "index.js",
+    "repository": "https://github.com/austincrim/next-personal-site",
     "scripts": {
         "dev": "next",
         "build": "next build",
@@ -24,7 +25,6 @@
         "autoprefixer": "^10.2.5",
         "dompurify": "^2.2.7",
         "gray-matter": "^4.0.2",
-        "postcss-preset-env": "^6.7.0",
         "remark": "^13.0.0",
         "remark-html": "^13.0.1",
         "tailwindcss": "^2.0.3"

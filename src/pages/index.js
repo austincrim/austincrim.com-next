@@ -62,11 +62,12 @@ function Index({ projects, posts }) {
                                     <LinkedInLogo />
                                 </div>
                             </div>
-                            <div className='mt-1 text-blue-800 transition-colors dark:text-blue-200 dark:hover:text-blue-300 hover:text-blue-500'>
-                                <a href='https://www.linkedin.com/in/austin-crim'>
-                                    Profile
-                                </a>
-                            </div>
+                            <a
+                                className='mt-1 text-blue-800 transition-colors dark:text-blue-200 dark:hover:text-blue-300 hover:text-blue-500'
+                                href='https://www.linkedin.com/in/austin-crim'
+                            >
+                                Profile
+                            </a>
                         </div>
                     </div>
                 </Section>
@@ -86,7 +87,7 @@ export async function getStaticProps() {
     return {
         props: {
             projects,
-            posts,
+            posts: posts.slice(0, 3),
         },
     };
 }

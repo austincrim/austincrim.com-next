@@ -22,11 +22,6 @@
             "title": "SMS Recipe Generator",
             "description": "Text ingredients and receive recipes. Built for the DEV.to x Twilio hackathon.",
             "repoUrl": "https://github.com/austincrim/dev-to-twilio"
-        },
-        {
-            "title": "This Website",
-            "description": "I designed and developed this portfolio page using Next.js and TailwindCSS.",
-            "repoUrl": "https://github.com/austincrim/next-personal-site"
         }
     ]
 }
