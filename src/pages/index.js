@@ -40,17 +40,17 @@ function Index({ projects, posts }) {
                     </ul>
                 </Section>
                 <Section title='Want to Chat?' id='contact'>
-                    <div className='grid grid-cols-2 mx-auto text-gray-700 dark:text-gray-100'>
+                    <div className='grid grid-cols-2 mx-auto text-muted dark:text-gray-100'>
                         <div className='p-4 text-center'>
                             <div className='w-1/2 mx-auto text-lg font-semibold md:w-auto'>
                                 Email
-                                <div className='w-8 h-8 mx-auto my-2 text-gray-500'>
+                                <div className='w-8 h-8 mx-auto my-2 text-muted'>
                                     <Mail />
                                 </div>
                             </div>
                             <a
                                 href='mailto:aust.crim@gmail.com'
-                                className='mt-1 text-blue-800 transition-colors dark:text-blue-200 dark:hover:text-blue-300 hover:text-blue-500'
+                                className='mt-1 transition-colors text-primary hover:text-secondary'
                             >
                                 aust.crim@gmail.com
                             </a>
@@ -58,12 +58,12 @@ function Index({ projects, posts }) {
                         <div className='p-4 text-center'>
                             <div className='w-1/2 mx-auto text-lg font-semibold md:w-auto'>
                                 LinkedIn
-                                <div className='w-8 h-8 mx-auto my-2 text-gray-500'>
+                                <div className='w-8 h-8 mx-auto my-2 text-muted'>
                                     <LinkedInLogo />
                                 </div>
                             </div>
                             <a
-                                className='mt-1 text-blue-800 transition-colors dark:text-blue-200 dark:hover:text-blue-300 hover:text-blue-500'
+                                className='mt-1 transition-colors text-primary hover:text-secondary'
                                 href='https://www.linkedin.com/in/austin-crim'
                             >
                                 Profile

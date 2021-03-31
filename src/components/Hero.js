@@ -1,4 +1,3 @@
-import Button from './Button';
 import RightArrow from './icons/RightArrow';
 
 const Hero = () => (
@@ -6,7 +5,7 @@ const Hero = () => (
             <div className='flex flex-col md:w-2/3'>
                 <h1 className='text-5xl'>
                     <span>Hi, I'm&nbsp;</span>
-                    <span className='block tracking-wide text-transparent md:inline bg-gradient-to-tr from-blue-400 to-blue-800 dark:to-blue-200 bg-clip-text whitespace-nowrap'>
+                    <span className='block tracking-wide text-transparent md:inline theme-gradient bg-clip-text whitespace-nowrap'>
                         Austin Crim
                     </span>
                 </h1>
@@ -17,7 +16,7 @@ const Hero = () => (
             </div>
             <div className='flex flex-col items-start justify-center space-y-4'>
                 <a
-                    className='text-lg font-semibold text-blue-800 transition-colors dark:text-blue-300 hover:text-blue-500 group'
+                    className='text-lg font-semibold transition-colors text-primary hover:text-secondary group'
                     href='/Austin Crim Resume.pdf'
                     download
                 >
@@ -27,7 +26,7 @@ const Hero = () => (
                     </span>
                 </a>
                 <a
-                    className='text-lg font-semibold text-blue-800 transition-colors dark:text-blue-300 hover:text-blue-500 group'
+                    className='text-lg font-semibold transition-colors text-primary hover:text-secondary group'
                     href='#contact'
                 >
                     <span className='mr-1'>Say Hi</span>

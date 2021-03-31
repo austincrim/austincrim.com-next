@@ -1,73 +1,93 @@
+function withOpacity(variableName) {
+    return ({ opacityValue }) => {
+        if (opacityValue) {
+            return `rgba(var(${variableName}), ${opacityValue})`;
+        }
+        return `rgb(var(${variableName}))`;
+    };
+}
+
 module.exports = {
-  purge: ['./src/**/*.js'],
-  darkMode: 'class',
-  variants: {},
-  theme: {
-    extend: {
-      typography: (theme) => ({
-        light: {
-          css: [
-            {
-              color: theme('colors.gray.200'),
-              '[class~="lead"]': {
-                color: theme('colors.gray.300'),
-              },
-              a: {
-                color: theme('colors.white'),
-              },
-              strong: {
-                color: theme('colors.white'),
-              },
-              'ol > li::before': {
-                color: theme('colors.gray.200'),
-              },
-              'ul > li::before': {
-                backgroundColor: theme('colors.gray.600'),
-              },
-              hr: {
-                borderColor: theme('colors.gray.200'),
-              },
-              blockquote: {
-                color: theme('colors.gray.200'),
-                borderLeftColor: theme('colors.gray.600'),
-              },
-              h1: {
-                color: theme('colors.white'),
-              },
-              h2: {
-                color: theme('colors.white'),
-              },
-              h3: {
-                color: theme('colors.white'),
-              },
-              h4: {
-                color: theme('colors.white'),
-              },
-              'figure figcaption': {
-                color: theme('colors.gray.200'),
-              },
-              code: {
-                color: theme('colors.white'),
-              },
-              'a code': {
-                color: theme('colors.white'),
-              },
-              pre: {
-                color: theme('colors.gray.200'),
-                backgroundColor: theme('colors.gray.800'),
-              },
-              thead: {
-                color: theme('colors.white'),
-                borderBottomColor: theme('colors.gray.200'),
-              },
-              'tbody tr': {
-                borderBottomColor: theme('colors.gray.600'),
-              },
+    purge: ['./src/**/*.js'],
+    darkMode: 'class',
+    variants: {},
+    theme: {
+        extend: {
+            backgroundColor: {
+                base: withOpacity('--color-base'),
+                'off-base': withOpacity('--color-off-base'),
             },
-          ],
+            textColor: {
+                base: withOpacity('--color-text-base'),
+                muted: withOpacity('--color-text-muted'),
+                'muted-hover': withOpacity('--color-text-muted-hover'),
+                primary: withOpacity('--color-primary'),
+                secondary: withOpacity('--color-secondary'),
+            },
+            typography: (theme) => ({
+                'theme': {
+                    css: [
+                        {
+                            color: 'var(--color-text-base)',
+                            '[class~="lead"]': {
+                                color: 'var(color-text-muted)',
+                            },
+                            a: {
+                                color: 'var(--color-text-base)',
+                            },
+                            strong: {
+                                color: 'var(--color-text-base)',
+                            },
+                            'ol > li::before': {
+                                color: 'var(--color-text-muted)',
+                            },
+                            'ul > li::before': {
+                                backgroundColor: theme('colors.gray.600'),
+                            },
+                            hr: {
+                                borderColor: 'var(--color-text-muted)',
+                            },
+                            blockquote: {
+                                color: 'var(--color-text-muted)',
+                                borderLeftColor: theme('colors.gray.600'),
+                            },
+                            h1: {
+                                color: 'var(--color-text-base)',
+                            },
+                            h2: {
+                                color: 'var(--color-text-base)',
+                            },
+                            h3: {
+                                color: 'var(--color-text-base)',
+                            },
+                            h4: {
+                                color: 'var(--color-text-base)',
+                            },
+                            'figure figcaption': {
+                                color: 'var(--color-text-muted)',
+                            },
+                            code: {
+                                color: 'var(--color-text-base)',
+                            },
+                            'a code': {
+                                color: 'var(--color-text-base)',
+                            },
+                            pre: {
+                                color: 'var(--color-text-muted)',
+                                backgroundColor: 'var(--color-off-base)',
+                            },
+                            thead: {
+                                color: 'var(--color-text-base)',
+                                borderBottomColor: 'var(--color-text-muted)',
+                            },
+                            'tbody tr': {
+                                borderBottomColor: theme('colors.gray.600'),
+                            },
+                        },
+                    ],
+                },
+            }),
         },
-      }),
     },
-  },
-  plugins: [require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/typography')],
 };

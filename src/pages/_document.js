@@ -16,7 +16,7 @@ class MyDocument extends Document {
                     />
                     <script type='text/javascript' src='/theme.js'></script>
                 </Head>
-                <body className='transition-colors dark:text-gray-100 dark:bg-gray-900'>
+                <body className='text-base transition-colors bg-base'>
                     <Main />
                     <NextScript />
                 </body>

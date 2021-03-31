@@ -12,7 +12,7 @@ const Post = ({ postData }) => {
 
     return (
         <Layout>
-            <article className='flex flex-col justify-around max-w-4xl pb-16 mx-auto space-y-10 md:px-16 dark:text-gray-100'>
+            <article className='flex flex-col justify-around max-w-4xl pb-16 mx-auto space-y-10 text-base md:px-16'>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -20,7 +20,7 @@ const Post = ({ postData }) => {
                     className='flex flex-col space-y-4'
                 >
                     <h1 className='inline pt-10 text-4xl'>{postData.title}</h1>
-                    <span className='text-gray-600 dark:text-gray-200'>
+                    <span className='text-muted'>
                         {new Date(postData.date).toLocaleDateString()}
                     </span>
                 </motion.div>
@@ -31,7 +31,7 @@ const Post = ({ postData }) => {
                     className='max-w-4xl'
                 >
                     <div
-                        className='mt-8 prose max-w-none dark:prose-light'
+                        className='mt-8 prose prose-theme max-w-none'
                         dangerouslySetInnerHTML={{
                             __html: postData.contentHtml,
                         }}

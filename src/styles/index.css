@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Inter:wght@300;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Inter:wght@300;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 
@@ -7,11 +7,37 @@ html {
 }
 
 nav {
-    font-family: "Rubik", sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --color-base: 255, 255, 255;              /* white */
+        --color-text-base: 0, 0, 0;               /* black */
+        --color-off-base: 249, 250, 251;          /* gray-50 */
+        --color-text-muted: 55, 65, 81;           /* gray-700 */
+        --color-text-muted-hover: 107, 114, 128;  /* gray-500 */
+        --color-primary: 30, 64, 175;             /* blue-800 */
+        --color-secondary: 96, 165, 250;          /* blue-400 */
+    }
+    
+    .theme-dark {
+        --color-base: 17, 24, 39;                  /* gray-900 */
+        --color-text-base: 243, 244, 246;          /* gray-100 */
+        --color-off-base: 31, 41, 55;              /* gray-800 */
+        --color-text-muted: 229, 231, 235;         /* gray-200 */
+        --color-text-muted-hover: 209, 213, 219;
+        --color-primary: 147,197,253;            /* blue-300 */
+    }
+    
+    .theme-gradient {
+        --tw-gradient-stops: rgb(var(--color-secondary)), rgb(var(--color-primary));
+        background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+    }
+}

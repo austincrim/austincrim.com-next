@@ -8,7 +8,7 @@ import GitHubLogo from './icons/GitHubLogo';
 const ProjectCard = ({ project, children }) => {
     const { title, repoUrl, appUrl } = project;
     return (
-        <div className='flex flex-col justify-between py-8 space-y-8 text-gray-700 dark:text-gray-100 lg:flex-row '>
+        <div className='flex flex-col justify-between py-8 space-y-8 lg:flex-row '>
             <div className='flex flex-col'>
                 <h3 className='text-xl font-semibold tracking-wider'>
                     {title}
@@ -20,7 +20,7 @@ const ProjectCard = ({ project, children }) => {
                 {repoUrl ? (
                     <a
                         href={repoUrl}
-                        className='flex items-center transition-colors hover:text-gray-900 dark:hover:text-gray-300'
+                        className='flex items-center transition-colors hover:text-muted-hover'
                     >
                         <span>View Source</span>
                         <span className='inline-block w-10 h-10 ml-1'>
@@ -32,7 +32,7 @@ const ProjectCard = ({ project, children }) => {
                 )}
                 {appUrl ? (
                     <a
-                        className='text-blue-800 transition-colors dark:text-blue-300 hover:text-blue-500 dark:hover:text-blue-400'
+                        className='transition-colors text-primary hover:text-secondary'
                         href={appUrl}
                     >
                         Go to App
