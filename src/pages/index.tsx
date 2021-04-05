@@ -79,7 +79,7 @@ function Index({ projects, posts }) {
 
 export async function getStaticProps() {
     const { projects } = JSON.parse(
-        fs.readFileSync(path.join(process.cwd(), 'data/projects.json'))
+        fs.readFileSync(path.join(process.cwd(), 'data/projects.json')).toString()
     );
     const posts = await getSortedPostsData();
 
