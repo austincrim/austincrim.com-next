@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Link from 'next/link';
-import RightArrow from './icons/RightArrow';
+import { RightArrow } from './Icons';
 
 const PostPreview = ({ post }) => {
     return (
-        <Link href={`/posts/${post.id}`}>
+        <Link href={`/posts/${post.slug}`}>
             <a>
                 <article className='relative flex items-center transition-transform transform group hover:-translate-x-2'>
                     <div className='flex flex-col flex-grow p-8 space-y-4 text-base rounded shadow-md bg-off-base'>
@@ -13,7 +13,7 @@ const PostPreview = ({ post }) => {
                                 {post.title}
                             </h3>
                             <span className='text-muted'>
-                                {new Date(post.date).toLocaleDateString()}
+                                {new Date(post.dateWritten).toLocaleDateString()}
                             </span>
                         </div>
                         <p className='leading-8 text-muted md:max-w-lg'>

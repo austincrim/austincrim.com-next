@@ -3,9 +3,10 @@ import Prism from 'prismjs';
 import PrismJsx from 'prismjs/components/prism-jsx';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import { GetStaticPropsContext, NextPageContext } from 'next';
+import { getAllSlugs, getPostBySlug } from '../../lib/posts';
 
-const Post = ({ postData }) => {
+const Post = ({ post }) => {
     React.useEffect(() => {
         Prism.highlightAll();
     }, []);
@@ -19,9 +20,9 @@ const Post = ({ postData }) => {
                     transition={{ delay: 0.2 }}
                     className='flex flex-col space-y-4'
                 >
-                    <h1 className='inline pt-10 text-4xl'>{postData.title}</h1>
+                    <h1 className='inline pt-10 text-4xl'>{post.title}</h1>
                     <span className='text-muted'>
-                        {new Date(postData.date).toLocaleDateString()}
+                        {new Date(post.dateWritten).toLocaleDateString()}
                     </span>
                 </motion.div>
                 <motion.div
@@ -33,7 +34,7 @@ const Post = ({ postData }) => {
                     <div
                         className='mt-8 prose prose-theme max-w-none'
                         dangerouslySetInnerHTML={{
-                            __html: postData.contentHtml,
+                            __html: post.content,
                         }}
                     />
                 </motion.div>
@@ -43,19 +44,19 @@ const Post = ({ postData }) => {
 };
 
 export async function getStaticPaths() {
-    const paths = getAllPostIds();
+    const slugs = await getAllSlugs();
+    const paths = slugs.map(({ slug }) => ({ params: { id: slug } }));
     return {
         paths,
         fallback: false,
     };
 }
 
-export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id);
-
+export async function getStaticProps(ctx: GetStaticPropsContext) {
+    const post = await getPostBySlug(ctx.params.id as string);
     return {
         props: {
-            postData,
+            post,
         },
     };
 }

@@ -1,11 +1,6 @@
-if (
-    localStorage.theme === 'theme-dark' ||
-    (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-) {
-    document.documentElement.classList.add('theme-dark');
-    localStorage.theme = 'theme-dark';
+if (localStorage.crimTheme) {
+    document.documentElement.classList.add(localStorage.crimTheme);
 } else {
-    document.documentElement.classList.remove('theme-dark');
-    localStorage.theme = 'theme-light';
+    document.documentElement.classList.add('theme-light');
+    localStorage.setItem('crimTheme', 'theme-light');
 }

@@ -1,9 +1,4 @@
-import GitHubLogo from './icons/GitHubLogo';
-
-/**
- * @param {object} props
- * @param {{title: string, description: string, repoUrl: string, appUrl: string}} props.project
- */
+import { GitHubLogo } from './Icons';
 
 const ProjectCard = ({ project, children }) => {
     const { title, repoUrl, appUrl } = project;

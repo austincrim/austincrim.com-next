@@ -8,7 +8,7 @@ function withOpacity(variableName) {
 }
 
 module.exports = {
-    purge: ['./src/**/*.js'],
+    purge: ['./src/**/*.{js,ts,jsx,tsx}'],
     darkMode: 'class',
     variants: {},
     theme: {
@@ -16,6 +16,8 @@ module.exports = {
             backgroundColor: {
                 base: withOpacity('--color-base'),
                 'off-base': withOpacity('--color-off-base'),
+                primary: withOpacity('--color-primary'),
+                secondary: withOpacity('--color-secondary'),
             },
             textColor: {
                 base: withOpacity('--color-text-base'),
@@ -25,10 +27,12 @@ module.exports = {
                 secondary: withOpacity('--color-secondary'),
             },
             typography: (theme) => ({
-                'theme': {
+                theme: {
                     css: [
                         {
                             color: 'var(--color-text-base)',
+                            'font-weight': 100,
+                            'font-family': 'Inter, sans-serif',
                             '[class~="lead"]': {
                                 color: 'var(color-text-muted)',
                             },
