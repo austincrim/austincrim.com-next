@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
-import { RightArrow } from './icons';
+import { RightArrow } from './Icons';
 
 const PostPreview = ({ post }) => {
     return (

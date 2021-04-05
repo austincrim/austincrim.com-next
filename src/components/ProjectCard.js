@@ -1,4 +1,4 @@
-import { GitHubLogo } from './icons';
+import { GitHubLogo } from './Icons';
 
 const ProjectCard = ({ project, children }) => {
     const { title, repoUrl, appUrl } = project;

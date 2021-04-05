@@ -1,4 +1,4 @@
-import { RightArrow } from './icons';
+import { RightArrow } from './Icons';
 
 const Hero = () => (
     <div className='flex flex-col justify-between my-20 space-y-14 md:items-end md:flex-row'>

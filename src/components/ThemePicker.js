@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Listbox, Transition } from '@headlessui/react';
-import { ColorSwatch } from './icons';
+import { ColorSwatch } from './Icons';
 import ThemeSwatch from './ThemeSwatch';
 
 export default function ThemePicker() {

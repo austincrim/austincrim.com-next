@@ -6,7 +6,7 @@ import Hero from '../components/Hero';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
 import ProjectCard from '../components/ProjectCard';
-import { LinkedInLogo, Mail } from '../components/icons';
+import { LinkedInLogo, Mail } from '../components/Icons';
 import PostPreview from '../components/PostPreview';
 import Layout from '../components/Layout';
 

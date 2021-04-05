@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
-import { GitHubLogo, TwitterLogo, ColorSwatch } from './icons';
+import { GitHubLogo, TwitterLogo, ColorSwatch } from './Icons';
 import ThemePicker from './ThemePicker';
 
 const Nav = () => {
