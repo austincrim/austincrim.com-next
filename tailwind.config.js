@@ -16,6 +16,8 @@ module.exports = {
             backgroundColor: {
                 base: withOpacity('--color-base'),
                 'off-base': withOpacity('--color-off-base'),
+                primary: withOpacity('--color-primary'),
+                secondary: withOpacity('--color-secondary'),
             },
             textColor: {
                 base: withOpacity('--color-text-base'),
@@ -25,7 +27,7 @@ module.exports = {
                 secondary: withOpacity('--color-secondary'),
             },
             typography: (theme) => ({
-                'theme': {
+                theme: {
                     css: [
                         {
                             color: 'var(--color-text-base)',

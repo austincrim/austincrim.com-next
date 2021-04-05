@@ -1,4 +1,4 @@
-import GitHubLogo from './icons/GitHubLogo';
+import { GitHubLogo } from './icons';
 
 /**
  * @param {object} props
