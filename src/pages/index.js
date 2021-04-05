@@ -81,7 +81,7 @@ export async function getStaticProps() {
     const { projects } = JSON.parse(
         fs.readFileSync(path.join(process.cwd(), 'data/projects.json'))
     );
-    const posts = getSortedPostsData();
+    const posts = await getSortedPostsData();
 
     return {
         props: {
