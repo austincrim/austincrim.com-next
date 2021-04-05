@@ -22,8 +22,8 @@ function Index({ projects, posts }) {
                 <Hero />
                 <Section title='Things I Have Built' id='portfolio'>
                     <div className='grid gap-10'>
-                        {projects.map((project, index) => (
-                            <ProjectCard project={project} key={index}>
+                        {projects.map((project) => (
+                            <ProjectCard project={project} key={project.title}>
                                 {project.description}
                             </ProjectCard>
                         ))}
@@ -31,9 +31,9 @@ function Index({ projects, posts }) {
                 </Section>
                 <Section title='Things I Have Written' id='blog'>
                     <ul className='flex flex-col mt-20 space-y-20'>
-                        {posts.map((post, index) => (
+                        {posts.map((post) => (
                             <li key={post.title}>
-                                <PostPreview post={post} key={index} />
+                                <PostPreview post={post} key={post.slug} />
                             </li>
                         ))}
                     </ul>

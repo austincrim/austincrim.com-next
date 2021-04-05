@@ -8,8 +8,12 @@ function withOpacity(variableName) {
 }
 
 module.exports = {
-    purge: ['./src/**/*.{js,ts,jsx,tsx}'],
-    darkMode: 'class',
+    mode: 'jit',
+    purge: {
+        mode: 'layers',
+        enabled: process.env.NODE_ENV === 'production',
+        content: ['./src/**/*.+(js|jsx|ts|tsx|)'],
+    },
     variants: {},
     theme: {
         extend: {
