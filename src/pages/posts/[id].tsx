@@ -1,16 +1,10 @@
 import * as React from 'react';
-import Prism from 'prismjs';
-import PrismJsx from 'prismjs/components/prism-jsx';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { GetStaticPropsContext, NextPageContext } from 'next';
 import { getAllSlugs, getPostBySlug } from '../../lib/posts';
 
 const Post = ({ post }) => {
-    React.useEffect(() => {
-        Prism.highlightAll();
-    }, []);
-
     return (
         <Layout>
             <article className='flex flex-col justify-around max-w-4xl pb-16 mx-auto space-y-10 text-base md:px-16'>
