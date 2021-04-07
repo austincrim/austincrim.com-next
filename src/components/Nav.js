@@ -20,7 +20,7 @@ const Nav = ({ pickerOpen, setPickerOpen }) => {
                 </div>
                 <div className='space-x-6'>
                     <button
-                        aria-label='open theme picker'
+                        aria-label='toggle theme picker'
                         onClick={() => setPickerOpen(!pickerOpen)}
                         className='w-8 h-8 transition-colors hover:text-muted-hover'
                     >

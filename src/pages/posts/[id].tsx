@@ -14,7 +14,7 @@ const Post = ({ post }) => {
                     transition={{ delay: 0.2 }}
                     className='flex flex-col space-y-4'
                 >
-                    <h1 className='inline pt-10 text-4xl'>{post.title}</h1>
+                    <h1 className='inline pt-10 text-4xl text-primary'>{post.title}</h1>
                     <span className='text-muted'>
                         {new Date(post.dateWritten).toLocaleDateString()}
                     </span>

@@ -54,6 +54,7 @@ export default function ThemePicker({ open }) {
                         key={theme.id}
                     >
                         <button
+                            aria-label={`select ${theme.title} theme`}
                             className='rounded focus:outline-none focus:ring-4'
                             onClick={() => pickTheme(theme.id)}
                         >

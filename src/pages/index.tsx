@@ -32,8 +32,8 @@ function Index({ projects, posts }) {
                 <Section title='Things I Have Written' id='blog'>
                     <ul className='flex flex-col mt-20 space-y-20'>
                         {posts.map((post) => (
-                            <li key={post.title}>
-                                <PostPreview post={post} key={post.slug} />
+                            <li key={post.slug}>
+                                <PostPreview post={post} />
                             </li>
                         ))}
                     </ul>

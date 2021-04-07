@@ -1,3 +1,5 @@
+const { backgroundColor } = require('tailwindcss/defaultTheme');
+
 function withOpacity(variableName) {
     return ({ opacityValue }) => {
         if (opacityValue) {
@@ -42,7 +44,11 @@ module.exports = {
                                 color: 'var(color-text-muted)',
                             },
                             a: {
-                                color: 'var(--color-text-base)',
+                              color: 'var(--color-primary)',
+                              transition: 'color 150ms ease'
+                            },
+                            'a:hover': {
+                                color: theme('textColor.muted-hover'),
                             },
                             strong: {
                                 color: 'var(--color-text-base)',
@@ -51,7 +57,7 @@ module.exports = {
                                 color: 'var(--color-text-muted)',
                             },
                             'ul > li::before': {
-                                backgroundColor: theme('colors.gray.600'),
+                                backgroundColor: theme('textColor.primary'),
                             },
                             hr: {
                                 borderColor: 'var(--color-text-muted)',
@@ -83,7 +89,7 @@ module.exports = {
                             },
                             pre: {
                                 color: 'var(--color-text-muted)',
-                                backgroundColor: 'var(--color-off-base)',
+                                backgroundColor: theme('backgroundColor.off-base'),
                             },
                             thead: {
                                 color: 'var(--color-text-base)',
