@@ -22,6 +22,7 @@ module.exports = {
                 'off-base': withOpacity('--color-off-base'),
                 primary: withOpacity('--color-primary'),
                 secondary: withOpacity('--color-secondary'),
+                muted: withOpacity('--color-text-muted'),
             },
             textColor: {
                 base: withOpacity('--color-text-base'),

@@ -57,6 +57,16 @@ body {
         --color-primary: 180, 83, 9 ;
         --color-secondary: 248, 113, 113;              
     }
+
+    .theme-evergreen {
+        --color-base: 4, 120, 87;               
+        --color-text-base: 240, 253, 244;             
+        --color-off-base: 6, 95, 70;             /* emerald-700 */ 
+        --color-text-muted: 240, 253, 244;       /* green-50 */      
+        --color-text-muted-hover: 187, 247, 208; /* green-200 */
+        --color-primary: 254, 243, 199;          /* amber-100 */
+        --color-secondary: 253, 230, 138;         /* amber-300 */              
+    }
     
     .theme-gradient {
         --tw-gradient-stops: rgb(var(--color-secondary)), rgb(var(--color-primary));

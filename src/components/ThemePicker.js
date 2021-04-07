@@ -13,7 +13,11 @@ const themes = [
     {
         id: 'theme-solar',
         title: 'Solar',
-    }
+    },
+    {
+        id: 'theme-evergreen',
+        title: 'Evergreen',
+    },
 ];
 
 export default function ThemePicker({ open }) {
@@ -31,16 +35,28 @@ export default function ThemePicker({ open }) {
     }, []);
 
     return (
-        <ul
-            className={`shadow-sm bg-base overflow-y-hidden overflow-x-auto ${
+        <div
+            className={`shadow-sm bg-off-base overflow-hidden ${
                 open ? 'max-h-40' : 'max-h-0'
             }`}
-            style={{ transition: 'max-height .3s ease-out, background-color 150ms' }}
+            style={{
+                transition: 'max-height .3s ease-out, background-color 150ms',
+            }}
         >
-            <div className='flex justify-center px-2 py-4 space-x-8'>
+            <ul
+                className={`text-center whitespace-nowrap overflow-x-auto p-4 transform transition-transform duration-300 ease-out ${
+                    open ? 'translate-y-0' : '-translate-y-10'
+                }`}
+            >
                 {themes.map((theme) => (
-                    <li key={theme.id}>
-                        <button onClick={() => pickTheme(theme.id)}>
+                    <li
+                        className={`inline-block mx-4 ${theme.id}`}
+                        key={theme.id}
+                    >
+                        <button
+                            className='rounded focus:outline-none focus:ring-4'
+                            onClick={() => pickTheme(theme.id)}
+                        >
                             <ThemeSwatch
                                 active={current === theme.id}
                                 title={theme.title}
@@ -48,7 +64,7 @@ export default function ThemePicker({ open }) {
                         </button>
                     </li>
                 ))}
-            </div>
-        </ul>
+            </ul>
+        </div>
     );
 }

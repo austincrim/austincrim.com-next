@@ -5,7 +5,7 @@ const ProjectCard = ({ project, children }) => {
     return (
         <div className='flex flex-col justify-between py-8 space-y-8 lg:flex-row '>
             <div className='flex flex-col'>
-                <h3 className='text-xl font-semibold tracking-wider'>
+                <h3 className='text-xl font-semibold tracking-wider text-secondary'>
                     {title}
                 </h3>
                 <div className='max-w-xl mt-2'>{children}</div>

@@ -6,7 +6,7 @@ const Nav = ({ pickerOpen, setPickerOpen }) => {
     return (
         <nav className='p-10 text-muted lg:max-w-5xl md:mx-auto md:max-w-3xl'>
             <div className='flex items-center justify-between'>
-                <div className='space-x-14'>
+                <div className='space-x-6 md:space-x-14'>
                     <Link href='/'>
                         <a className='transition-colors hover:text-muted-hover'>
                             Home
@@ -19,7 +19,11 @@ const Nav = ({ pickerOpen, setPickerOpen }) => {
                     </Link>
                 </div>
                 <div className='space-x-6'>
-                    <button aria-label='open theme picker' onClick={() => setPickerOpen(!pickerOpen)} className='w-8 h-8 transition-colors hover:text-muted-hover'>
+                    <button
+                        aria-label='open theme picker'
+                        onClick={() => setPickerOpen(!pickerOpen)}
+                        className='w-8 h-8 transition-colors hover:text-muted-hover'
+                    >
                         <ColorSwatch />
                     </button>
                     <a
