@@ -3,73 +3,72 @@
 @tailwind components;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 nav {
-    font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --color-base: 255, 255, 255;              /* white */
-        --color-text-base: 0, 0, 0;               /* black */
-        --color-off-base: 249, 250, 251;          /* gray-50 */
-        --color-text-muted: 55, 65, 81;           /* gray-700 */
-        --color-text-muted-hover: 107, 114, 128;  /* gray-500 */
-        --color-primary: 30, 64, 175;             /* blue-800 */
-        --color-secondary: 96, 165, 250;          /* blue-400 */
-    }
+  :root {
+    --color-base: 255, 255, 255; /* white */
+    --color-text-base: 0, 0, 0; /* black */
+    --color-off-base: 249, 250, 251; /* gray-50 */
+    --color-text-muted: 55, 65, 81; /* gray-700 */
+    --color-text-muted-hover: 107, 114, 128; /* gray-500 */
+    --color-primary: 30, 64, 175; /* blue-800 */
+    --color-secondary: 96, 165, 250; /* blue-400 */
+  }
 
-    .theme-light {
-        --color-base: 255, 255, 255;              /* white */
-        --color-text-base: 0, 0, 0;               /* black */
-        --color-off-base: 249, 250, 251;          /* gray-50 */
-        --color-text-muted: 55, 65, 81;           /* gray-700 */
-        --color-text-muted-hover: 107, 114, 128;  /* gray-500 */
-        --color-primary: 30, 64, 175;             /* blue-800 */
-        --color-secondary: 96, 165, 250;          /* blue-400 */
-    }
-    
-    .theme-dark {
-        --color-base: 17, 24, 39;                  /* gray-900 */
-        --color-text-base: 243, 244, 246;          /* gray-100 */
-        --color-off-base: 31, 41, 55;              /* gray-800 */
-        --color-text-muted: 229, 231, 235;         /* gray-200 */
-        --color-text-muted-hover: 209, 213, 219;
-        --color-primary: 147,197,253;              /* blue-300 */
-        --color-secondary: 96, 165, 250;           /* blue-400 */
+  .theme-light {
+    --color-base: 255, 255, 255; /* white */
+    --color-text-base: 0, 0, 0; /* black */
+    --color-off-base: 249, 250, 251; /* gray-50 */
+    --color-text-muted: 55, 65, 81; /* gray-700 */
+    --color-text-muted-hover: 107, 114, 128; /* gray-500 */
+    --color-primary: 30, 64, 175; /* blue-800 */
+    --color-secondary: 96, 165, 250; /* blue-400 */
+  }
 
-    }
+  .theme-dark {
+    --color-base: 17, 24, 39; /* gray-900 */
+    --color-text-base: 243, 244, 246; /* gray-100 */
+    --color-off-base: 31, 41, 55; /* gray-800 */
+    --color-text-muted: 229, 231, 235; /* gray-200 */
+    --color-text-muted-hover: 209, 213, 219;
+    --color-primary: 147, 197, 253; /* blue-300 */
+    --color-secondary: 96, 165, 250; /* blue-400 */
+  }
 
-    .theme-solar {
-        --color-base: 255, 241, 242;               /* rose-50 */
-        --color-text-base: 26, 28, 35;             
-        --color-off-base: 255, 228, 230;           
-        --color-text-muted: 68, 64, 60;            
-        --color-text-muted-hover: 120, 113, 108;
-        --color-primary: 180, 83, 9 ;
-        --color-secondary: 248, 113, 113;              
-    }
+  .theme-solar {
+    --color-base: 255, 241, 242; /* rose-50 */
+    --color-text-base: 26, 28, 35;
+    --color-off-base: 255, 228, 230;
+    --color-text-muted: 68, 64, 60;
+    --color-text-muted-hover: 120, 113, 108;
+    --color-primary: 180, 83, 9;
+    --color-secondary: 248, 113, 113;
+  }
 
-    .theme-evergreen {
-        --color-base: 4, 120, 87;               
-        --color-text-base: 240, 253, 244;             
-        --color-off-base: 6, 95, 70;             /* emerald-700 */ 
-        --color-text-muted: 240, 253, 244;       /* green-50 */      
-        --color-text-muted-hover: 187, 247, 208; /* green-200 */
-        --color-primary: 254, 243, 199;          /* amber-100 */
-        --color-secondary: 253, 230, 138;         /* amber-300 */              
-    }
-    
-    .theme-gradient {
-        --tw-gradient-stops: rgb(var(--color-secondary)), rgb(var(--color-primary));
-        background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-    }
+  .theme-evergreen {
+    --color-base: 4, 120, 87;
+    --color-text-base: 240, 253, 244;
+    --color-off-base: 6, 95, 70; /* emerald-700 */
+    --color-text-muted: 240, 253, 244; /* green-50 */
+    --color-text-muted-hover: 187, 247, 208; /* green-200 */
+    --color-primary: 254, 243, 199; /* amber-100 */
+    --color-secondary: 253, 230, 138; /* amber-300 */
+  }
+
+  .theme-gradient {
+    --tw-gradient-stops: rgb(var(--color-secondary)), rgb(var(--color-primary));
+    background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  }
 }
