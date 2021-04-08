@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
-import { GetServerSidePropsContext } from 'next';
-import { getPostBySlug } from '../../lib/posts';
+import { GetStaticPropsContext } from 'next';
+import { getAllSlugs, getPostBySlug } from '../../lib/posts';
+import { useRouter } from 'next/router'
 
 const Post = ({ post }) => {
+  const router = useRouter();
+
   React.useEffect(() => {
     async function hit() {
       fetch('/api/hits', {
@@ -17,6 +20,14 @@ const Post = ({ post }) => {
     }
     hit();
   }, []);
+
+  if (router.isFallback) {
+    return (
+      <Layout>
+        <div className='grid place-content-center'>Loading...</div>
+      </Layout>
+    )
+  }
 
   return (
     <Layout>
@@ -50,12 +61,22 @@ const Post = ({ post }) => {
   );
 };
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const post = await getPostBySlug(context.params.id as string);
+export async function getStaticPaths() {
+  const slugs = await getAllSlugs();
+  const paths = slugs.map(({ slug }) => ({ params: { id: slug } }));
+  return {
+    paths,
+    fallback: 'blocking'
+  };
+}
+
+export async function getStaticProps(ctx: GetStaticPropsContext) {
+  const post = await getPostBySlug(ctx.params.id as string);
   return {
     props: {
       post
-    }
+    },
+    revalidate: 600
   };
 }
 
