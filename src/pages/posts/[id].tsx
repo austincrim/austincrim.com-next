@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
-import { GetServerSidePropsContext, GetStaticPropsContext } from 'next';
-import { getAllSlugs, getPostBySlug } from '../../lib/posts';
+import { GetServerSidePropsContext } from 'next';
+import { getPostBySlug } from '../../lib/posts';
 
 const Post = ({ post }) => {
   React.useEffect(() => {
