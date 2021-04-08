@@ -38,7 +38,7 @@ module.exports = {
                     css: [
                         {
                             color: 'var(--color-text-base)',
-                            'font-weight': 100,
+                            'font-weight': 'normal',
                             'font-family': 'Inter, sans-serif',
                             '[class~="lead"]': {
                                 color: 'var(color-text-muted)',

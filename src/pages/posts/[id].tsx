@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
-import { GetStaticPropsContext } from 'next';
+import { GetServerSidePropsContext, GetStaticPropsContext } from 'next';
 import { getAllSlugs, getPostBySlug } from '../../lib/posts';
 
 const Post = ({ post }) => {
@@ -50,17 +50,8 @@ const Post = ({ post }) => {
   );
 };
 
-export async function getStaticPaths() {
-  const slugs = await getAllSlugs();
-  const paths = slugs.map(({ slug }) => ({ params: { id: slug } }));
-  return {
-    paths,
-    fallback: false
-  };
-}
-
-export async function getStaticProps(ctx: GetStaticPropsContext) {
-  const post = await getPostBySlug(ctx.params.id as string);
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const post = await getPostBySlug(context.params.id as string);
   return {
     props: {
       post

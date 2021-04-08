@@ -1,3 +1,5 @@
+// the design for this component was directly inspired by Max Bock's personal website. Check out his amazing work here: https://mxb.dev/
+
 import * as React from 'react';
 import ThemeSwatch from './ThemeSwatch';
 
