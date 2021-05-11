@@ -10,11 +10,6 @@ import { LinkedInLogo, Mail } from '../components/Icons';
 import PostPreview from '../components/PostPreview';
 import Layout from '../components/Layout';
 
-/**
- * @param {object} props
- * @param {Array<{title: string, description: string, repoUrl: string, appUrl: string}>} props.projects
- */
-
 function Index({ projects, posts }) {
   return (
     <Layout>
