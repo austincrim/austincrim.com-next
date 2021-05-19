@@ -1,5 +1,3 @@
-const { backgroundColor } = require('tailwindcss/defaultTheme');
-
 function withOpacity(variableName) {
     return ({ opacityValue }) => {
         if (opacityValue) {

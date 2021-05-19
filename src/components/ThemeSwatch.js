@@ -5,7 +5,7 @@ export default function ThemeSwatch({ title, active }) {
     <div
       className={`theme-${title.toLowerCase()} ${
         active ? 'transform scale-110 ring' : ''
-      } rounded flex flex-col items-center px-5 py-3 text-base bg-base hover:bg-off-base hover:text-primary transition-all`}
+      } rounded flex flex-col items-center px-5 py-3 text-base bg-base hover:bg-off-base hover:text-primary group-focus:bg-off-base group-focus:text-primary transition-all`}
     >
       <span className="text-sm">{title}</span>
       <div className="flex mt-4 -space-x-2">

@@ -2,10 +2,6 @@
 @tailwind base;
 @tailwind components;
 
-html {
-  scroll-behavior: smooth;
-}
-
 nav {
   font-family: 'Rubik', sans-serif;
 }
@@ -50,7 +46,7 @@ body {
   .theme-solar {
     --color-base: 255, 241, 242; /* rose-50 */
     --color-text-base: 26, 28, 35;
-    --color-off-base: 255, 228, 230;
+    --color-off-base: 255, 234, 236;
     --color-text-muted: 68, 64, 60;
     --color-text-muted-hover: 120, 113, 108;
     --color-primary: 180, 83, 9;
@@ -60,7 +56,7 @@ body {
   .theme-evergreen {
     --color-base: 4, 120, 87;
     --color-text-base: 240, 253, 244;
-    --color-off-base: 6, 95, 70; /* emerald-700 */
+    --color-off-base: 5, 150, 105; /* emerald-600 */
     --color-text-muted: 240, 253, 244; /* green-50 */
     --color-text-muted-hover: 187, 247, 208; /* green-200 */
     --color-primary: 254, 243, 199; /* amber-100 */
