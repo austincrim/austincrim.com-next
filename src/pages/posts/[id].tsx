@@ -31,7 +31,7 @@ const Post = ({ post }) => {
 
   return (
     <Layout>
-      <article className="flex flex-col justify-around max-w-4xl pb-16 mx-auto space-y-10 text-base md:px-16">
+      <article className="flex flex-col justify-around max-w-4xl pb-16 mx-auto space-y-10 text-base">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -42,6 +42,7 @@ const Post = ({ post }) => {
           <span className="text-muted">
             {new Date(post.dateWritten).toLocaleDateString()}
           </span>
+
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
