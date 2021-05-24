@@ -17,9 +17,9 @@ class MyDocument extends Document {
           <script type='text/javascript' src='/theme.js'></script>
           <link
             rel='preload'
-            href='/fonts/inter-var.ttf'
+            href='/fonts/inter-var.woff2'
             as='font'
-            type='font/ttf'
+            type='font/woff2'
             crossOrigin='anonymous'
           />
           <link
