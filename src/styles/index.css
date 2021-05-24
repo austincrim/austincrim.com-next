@@ -1,6 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Inter:wght@300;500;700&display=swap');
 @tailwind base;
 @tailwind components;
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 500 700;
+  font-display: optional;
+  src: url('/fonts/inter-var.ttf');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300 400;
+  font-display: optional;
+  src: url('/fonts/rubik-var.ttf');
+}
 
 nav {
   font-family: 'Rubik', sans-serif;
@@ -30,7 +45,7 @@ body {
     --color-text-muted: 55, 65, 81; /* gray-700 */
     --color-text-muted-hover: 107, 114, 128; /* gray-500 */
     --color-primary: 30, 64, 175; /* blue-800 */
-    --color-secondary: 96, 165, 250; /* blue-400 */
+    --color-secondary: 59, 130, 246; /* blue-500 */
   }
 
   .theme-dark {

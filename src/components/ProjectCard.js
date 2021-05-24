@@ -13,7 +13,7 @@ const ProjectCard = ({ project, children }) => {
         {repoUrl ? (
           <a
             href={repoUrl}
-            className='flex items-center transition-colors hover:text-muted-hover'
+            className='flex items-center font-medium transition-colors hover:text-muted-hover'
           >
             View Source
           </a>
