@@ -7,7 +7,7 @@ const PostPreview = ({ post }) => {
     <Link href={`/blog/${post.slug}`}>
       <a>
         <article className="relative flex items-center transition-transform transform group hover:-translate-x-2">
-          <div className="flex flex-col flex-grow p-8 space-y-4 text-base rounded shadow-md bg-off-base">
+          <div className="flex flex-col flex-grow py-8 space-y-4 text-base rounded sm:px-8 sm:shadow-md sm:bg-off-base">
             <div className="flex flex-col justify-between space-y-2 md:space-y-0 md:flex-row">
               <h3 className="text-xl font-bold tracking-wider">{post.title}</h3>
               <span className="text-muted">
