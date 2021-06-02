@@ -17,11 +17,6 @@ module.exports = {
   variants: {},
   theme: {
     extend: {
-      screens: {
-        hover: {
-          raw: '(hover: hover)'
-        }
-      },
       backgroundColor: {
         base: withOpacity('--color-base'),
         'off-base': withOpacity('--color-off-base'),
