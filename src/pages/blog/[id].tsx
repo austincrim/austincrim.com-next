@@ -4,7 +4,7 @@ import { GetStaticPropsContext } from 'next'
 import { getAllSlugs, getPostBySlug } from '../../lib/posts'
 import { useRouter } from 'next/router'
 
-const Post = ({ post }) => {
+export default function Post({ post }) {
   const router = useRouter()
 
   React.useEffect(() => {
@@ -68,5 +68,3 @@ export async function getStaticProps(ctx: GetStaticPropsContext) {
     revalidate: 1
   }
 }
-
-export default Post
