@@ -1,6 +1,6 @@
 import PostPreview from '../components/PostPreview';
 import Layout from '../components/Layout';
-import { getSortedPostsData } from '../lib/posts';
+import { getPosts } from '../lib/posts';
 
 export default function Blog({ posts }) {
   return (
@@ -16,7 +16,7 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getSortedPostsData();
+  const posts = await getPosts({ orderBy: { dateWritten: 'desc' } });
 
   return {
     props: {
