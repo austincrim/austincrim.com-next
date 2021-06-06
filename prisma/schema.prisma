@@ -14,6 +14,14 @@ model Post {
   dateWritten DateTime @default(now())
   likes       Int      @default(0)
   hits        Int      @default(0)
-  lede        String
-  slug        String   @unique
+  lede        String?
+  slug        String?  @unique
+}
+
+model Project {
+  id          Int     @id @default(autoincrement())
+  title       String
+  description String
+  repoUrl     String
+  appUrl      String?
 }

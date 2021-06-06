@@ -2,8 +2,11 @@ import remark from 'remark';
 import html from 'remark-html';
 import remarkPrism from 'remark-prism';
 import prisma from './prisma';
+import type { Prisma } from '@prisma/client';
 
-export async function getSortedPostsData() {
+type getPostsArgs = Omit<Prisma.PostFindManyArgs, 'select'>;
+
+export async function getPosts(opts?: getPostsArgs) {
   const allPostsData = await prisma.post.findMany({
     select: {
       dateWritten: true,
@@ -11,9 +14,7 @@ export async function getSortedPostsData() {
       title: true,
       lede: true
     },
-    orderBy: {
-      dateWritten: 'desc'
-    }
+    ...opts
   });
 
   const serializeablePosts = allPostsData.map((post) => ({
