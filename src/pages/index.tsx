@@ -1,8 +1,6 @@
 import * as React from 'react'
-import fs from 'fs'
-import path from 'path'
 import { GetStaticProps } from 'next'
-import { getSortedPostsData } from '../lib/posts'
+import { getPosts } from '../lib/posts'
 import Hero from '../components/Hero'
 import Section from '../components/Section'
 import Footer from '../components/Footer'
@@ -10,13 +8,14 @@ import ProjectCard from '../components/ProjectCard'
 import { LinkedInLogo, Mail } from '../components/Icons'
 import PostPreview from '../components/PostPreview'
 import Layout from '../components/Layout'
-import type { Post } from '@prisma/client'
+import type { Post, Project } from '@prisma/client'
+import { getProjects } from '../lib/projects'
 
 export default function Index({
   projects,
   posts
 }: {
-  projects: any
+  projects: Array<Project>
   posts: Array<Post>
 }) {
   return (
@@ -24,13 +23,13 @@ export default function Index({
       <main>
         <Hero />
         <Section title='Things I Have Built' id='portfolio'>
-          <div className='grid gap-10'>
+          <ul className='flex flex-col gap-10'>
             {projects.map((project) => (
-              <ProjectCard project={project} key={project.title}>
-                {project.description}
-              </ProjectCard>
+              <li key={project.title}>
+                <ProjectCard project={project} />
+              </li>
             ))}
-          </div>
+          </ul>
         </Section>
         <Section title='Things I Have Written' id='blog'>
           <ul className='flex flex-col mt-20 space-y-20'>
@@ -81,15 +80,15 @@ export default function Index({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { projects } = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), 'data/projects.json')).toString()
-  )
-  const posts = await getSortedPostsData()
+  const [posts, projects] = await Promise.all([
+    getPosts({ take: 3, orderBy: { hits: 'desc' } }),
+    getProjects()
+  ])
 
   return {
     props: {
       projects,
-      posts: posts.slice(0, 3)
+      posts: posts
     }
   }
 }
