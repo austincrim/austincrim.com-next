@@ -1,34 +1,33 @@
 {
-    "name": "austin-crim-portfolio",
-    "version": "1.0.0",
-    "description": "Personal site for Austin Crim",
-    "main": "index.js",
-    "repository": "https://github.com/austincrim/next-personal-site",
-    "scripts": {
-        "dev": "next",
-        "build": "next build",
-        "start": "next start"
-    },
-    "keywords": [],
-    "author": "Austin Crim",
-    "license": "ISC",
-    "dependencies": {
-        "@headlessui/react": "^1.2.0",
-        "@prisma/client": "^2.24.0",
-        "next": "10.2.3",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2"
-    },
-    "devDependencies": {
-        "@tailwindcss/typography": "^0.4.1",
-        "@types/react": "^17.0.9",
-        "autoprefixer": "^10.2.6",
-        "prisma": "^2.24.0",
-        "tailwindcss": "^2.1.4",
-        "remark": "^13.0.0",
-        "remark-html": "^13.0.1",
-        "prismjs": "^1.23.0",
-        "remark-prism": "^1.3.6",
-        "typescript": "^4.3.2"
-    }
+  "name": "austin-crim-portfolio",
+  "version": "1.0.0",
+  "description": "Personal site for Austin Crim",
+  "main": "index.js",
+  "repository": "https://github.com/austincrim/austincrim.com",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "Austin Crim",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^2.24.1",
+    "next": "10.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.4.1",
+    "@types/react": "^17.0.9",
+    "autoprefixer": "^10.2.6",
+    "prisma": "^2.24.1",
+    "prismjs": "^1.23.0",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
+    "remark-prism": "^1.3.6",
+    "tailwindcss": "^2.1.4",
+    "typescript": "^4.3.2"
+  }
 }
