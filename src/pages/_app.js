@@ -1,6 +1,6 @@
-import '../styles/index.css'
-import '../styles/prism.css'
-import Head from 'next/head'
+import '../styles/index.css';
+import '../styles/prism.css';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,6 +10,6 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
     </>
-  )
+  );
 }
-export default MyApp
+export default MyApp;
