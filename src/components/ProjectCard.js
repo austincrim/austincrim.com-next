@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
         <div className="max-w-xl mt-2">{description}</div>
       </div>
 
-      <div className="flex flex-col items-end mt-8 space-y-2">
+      <div className="flex flex-col items-start mt-8 space-y-2 lg:items-end">
         {repoUrl ? (
           <a
             href={repoUrl}
