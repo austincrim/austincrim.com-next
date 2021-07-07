@@ -7,7 +7,7 @@ export default function attacher() {
   async function transformer(tree) {
     const highlighter = await getHighlighter({
       theme: 'github-dark',
-      langs: ['javascript', 'jsx', 'typescript', 'rust', 'go']
+      langs: ['javascript', 'jsx', 'typescript', 'rust', 'go', 'html', 'css', 'cobol']
     })
     visit(tree, 'code', visitor)
 
