@@ -12,7 +12,8 @@ export async function getPosts(opts?: getPostsArgs) {
       dateWritten: true,
       slug: true,
       title: true,
-      lede: true
+      lede: true,
+      hits: true
     },
     ...opts
   });
