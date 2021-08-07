@@ -30,7 +30,7 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
         </Head>
-        <body className="text-base transition-colors bg-base">
+        <body className="text-base transition-colors duration-300 bg-base">
           <Main />
           <NextScript />
         </body>

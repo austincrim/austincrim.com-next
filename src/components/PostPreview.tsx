@@ -6,8 +6,8 @@ import { Post } from '@prisma/client'
 export default function PostPreview({ post }: { post: Post }) {
   return (
     <Link href={`/blog/${post.slug}`}>
-      <a>
-        <article className='relative flex items-center transition-transform transform group hover:-translate-x-2'>
+      <a className='group'>
+        <article className='relative flex items-center transition-transform group-hover:-translate-x-2'>
           <div className='flex flex-col flex-grow py-8 space-y-4 text-base rounded sm:px-8 sm:shadow-md sm:bg-off-base'>
             <div className='flex flex-col justify-between space-y-2 md:space-y-0 md:space-x-2 md:flex-row md:items-baseline'>
               <h3 className='text-xl font-bold tracking-wider'>{post.title}</h3>
