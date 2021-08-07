@@ -50,7 +50,7 @@ export default function ThemePicker({ open }) {
         }`}
       >
         {themes.map((theme) => (
-          <li className={`inline-block mx-4 ${theme.id} transition-transform duration-150 hover:rotate-2 active:-rotate-1`} key={theme.id}>
+          <li className={`inline-block mx-4 ${theme.id} transition-transform duration-150 focus:rotate-2 hover:rotate-2 active:-rotate-1`} key={theme.id}>
             <button
               aria-label={`select ${theme.title} theme`}
               className='rounded focus:outline-none focus:ring-4 group'
