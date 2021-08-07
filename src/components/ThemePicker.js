@@ -39,13 +39,13 @@ export default function ThemePicker({ open }) {
   return (
     <div
       className={`shadow-sm bg-off-base overflow-hidden absolute w-full transition-all  ${
-        open ? 'translate-y-0 duration-300 ease-out' : '-translate-y-full duration-150 ease-in'
+        open ? 'translate-y-0 duration-300 ease-out' : '-translate-y-full duration-150 ease-in opacity-0'
       }`}
     >
       <ul
         className={`text-center whitespace-nowrap overflow-x-auto p-4 transition-transform ${
           open
-            ? 'translate-y-0 duration-300 ease-out delay-100'
+            ? 'translate-y-0 duration-300 ease-out'
             : '-translate-y-10 duration-150 ease-in'
         }`}
       >
