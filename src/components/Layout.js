@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       <div
         className={`transition-transform   ${
           pickerOpen
-            ? 'translate-y-[124px] duration-300 ease-out'
+            ? 'translate-y-[124px] duration-[400ms] ease-out'
             : 'translate-y-0 duration-200 ease-in'
         }`}
       >
