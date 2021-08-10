@@ -39,7 +39,7 @@ export default function ThemePicker({ open }) {
   return (
     <div
       className={`shadow-sm bg-off-base overflow-hidden absolute w-full transition-all  ${
-        open ? 'translate-y-0 duration-300 ease-out' : '-translate-y-full duration-150 ease-in opacity-0'
+        open ? 'translate-y-0 duration-[400ms] ease-out' : '-translate-y-full duration-200 ease-in opacity-0'
       }`}
     >
       <ul
@@ -50,10 +50,10 @@ export default function ThemePicker({ open }) {
         }`}
       >
         {themes.map((theme) => (
-          <li className={`inline-block mx-4 ${theme.id} transition-transform duration-150 focus:rotate-2 hover:rotate-2 active:-rotate-1`} key={theme.id}>
+          <li className={`inline-block mx-4 ${theme.id} transition-transform duration-150 hover:rotate-2`} key={theme.id}>
             <button
               aria-label={`select ${theme.title} theme`}
-              className='rounded focus:outline-none focus:ring-4 group'
+              className='transition-transform duration-150 rounded focus:outline-none focus:ring-4 focus:rotate-2 group'
               onClick={() => pickTheme(theme.id)}
             >
               <ThemeSwatch active={current === theme.id} title={theme.title} />
