@@ -43,8 +43,8 @@ export default function Index({
 
       <Footer>
         <div className='flex flex-col items-center gap-4'>
-          <span>Designed and developed by Austin Crim</span>
           <a className='font-medium' href='mailto:aust.crim@gmail.com'>Say Hi</a>
+          <span>Designed and developed by Austin Crim</span>
         </div>
       </Footer>
     </Layout>
