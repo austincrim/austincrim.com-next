@@ -5,14 +5,14 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
-  font-display: optional;
+  font-display: swap;
   src: url('/fonts/inter-var.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
   src: url('/fonts/rubik-reg.woff2') format('woff2');
 }
 
