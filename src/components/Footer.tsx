@@ -1,5 +1,5 @@
 const Footer = (props) => (
-  <footer className="px-10 py-8 text-sm font-light tracking-wide text-center text-muted">
+  <footer className="py-8 text-sm font-light tracking-wide text-center text-muted">
     {props.children}
   </footer>
 );

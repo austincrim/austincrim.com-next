@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  // if (process.env.NODE_ENV !== 'production') return res.send(200)
+  if (process.env.NODE_ENV !== 'production') return res.send(200)
 
   let queries = []
   const { path } = req.query
