@@ -12,9 +12,8 @@
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
-  font-weight: 300 400;
   font-display: optional;
-  src: url('/fonts/rubik-var.ttf');
+  src: url('/fonts/rubik-reg.woff2') format('woff2');
 }
 
 nav {

@@ -15,20 +15,6 @@ class MyDocument extends Document {
             content="The portfolio of Austin Crim, a fullstack web developer"
           />
           <script type="text/javascript" src="/theme.js"></script>
-          <link
-            rel="preload"
-            href="/fonts/inter-var.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/rubik-var.ttf"
-            as="font"
-            type="font/ttf"
-            crossOrigin="anonymous"
-          />
         </Head>
         <body className="text-base transition-colors duration-300 bg-base">
           <Main />
