@@ -9,19 +9,6 @@ import styles from './id.module.css'
 export default function Post({ post }: { post: TPost }) {
   const router = useRouter()
 
-  React.useEffect(() => {
-    async function hit() {
-      fetch('/api/hits', {
-        method: 'POST',
-        body: JSON.stringify({ slug: post.slug }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-    }
-    hit()
-  }, [])
-
   if (router.isFallback) {
     return (
       <Layout>

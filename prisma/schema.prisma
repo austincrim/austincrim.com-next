@@ -26,3 +26,9 @@ model Project {
   appUrl      String?
   order       Int?    @default(-1)
 }
+
+model View {
+  id        String      @id @default(uuid())
+  path      String
+  visitedAt DateTime @default(now())
+}

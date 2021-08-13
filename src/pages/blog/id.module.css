@@ -6,11 +6,19 @@
     opacity: 1;
   }
 }
+@keyframes slide-in {
+  from {
+    transform: translateX(-2rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 
 .heading {
   animation: fade-in 200ms ease-out 50ms backwards;
 }
 
 .article {
-  animation: fade-in 500ms ease-out 200ms backwards;
+  animation: fade-in 500ms ease-out 200ms backwards, slide-in 400ms ease-out 200ms;
 }
