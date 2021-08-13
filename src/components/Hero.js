@@ -27,7 +27,7 @@ const Hero = () => (
       </a>
       <a
         className="text-lg font-semibold transition-colors text-primary hover:text-secondary group"
-        href="#contact"
+        href="mailto:aust.crim@gmail.com"
       >
         <span className="mr-1">Say Hi</span>
         <span className="inline-block align-middle transition-transform transform group-hover:translate-x-1">
