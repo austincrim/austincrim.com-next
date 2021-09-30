@@ -7,14 +7,21 @@ export default function attacher() {
   async function transformer(tree) {
     const highlighter = await getHighlighter({
       theme: 'github-dark',
-      langs: ['javascript', 'jsx', 'typescript', 'rust', 'go', 'html', 'css', 'cobol']
+      langs: [
+        'javascript',
+        'jsx',
+        'typescript',
+        'rust',
+        'go',
+        'html',
+        'css',
+        'cobol'
+      ]
     })
-    visit(tree, 'code', visitor)
-
-    function visitor(node) {
+    visit(tree, 'code', (node) => {
       const highlighted = highlighter.codeToHtml(node.value, node.lang)
       node.type = 'html'
       node.value = highlighted
-    }
+    })
   }
 }
