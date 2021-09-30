@@ -16,6 +16,7 @@ model Post {
   hits        Int      @default(0)
   lede        String?
   slug        String?  @unique
+  published   Boolean  @default(false)
 }
 
 model Project {
@@ -28,7 +29,13 @@ model Project {
 }
 
 model View {
-  id        String      @id @default(uuid())
+  id        String   @id @default(uuid())
   path      String
   visitedAt DateTime @default(now())
+}
+
+model Session {
+  id        String   @id
+  createdAt DateTime @default(now())
+  expiresAt DateTime
 }

@@ -15,6 +15,9 @@ export async function getPosts(opts?: getPostsArgs) {
       lede: true,
       hits: true
     },
+    where: {
+      published: true
+    },
     ...opts
   });
 
