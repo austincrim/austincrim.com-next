@@ -48,7 +48,7 @@ export async function getPostBySlug(slug: string) {
 
   const stringDate = new Date(post.dateWritten).toString();
   const renderedContent = (
-    await remark().use(remarkShiki).use(html).process(post.content)
+    await remark().use(html).process(post.content)
   ).toString();
 
   return {
