@@ -5,7 +5,7 @@ export default function attacher() {
   return transformer
 
   async function transformer(tree) {
-    const highlighter = await getHighlighter({
+    const h = await getHighlighter({
       theme: 'github-dark',
       langs: [
         'javascript',
@@ -18,10 +18,13 @@ export default function attacher() {
         'cobol'
       ]
     })
-    visit(tree, 'code', (node) => {
-      const highlighted = highlighter.codeToHtml(node.value, node.lang)
+
+    visit(tree, 'code', visitor)
+
+    function visitor(node) {
+      const highlighted = h.codeToHtml(node.value, node.lang)
       node.type = 'html'
       node.value = highlighted
-    })
+    }
   }
 }
