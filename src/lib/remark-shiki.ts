@@ -15,7 +15,9 @@ export default function attacher() {
         'go',
         'html',
         'css',
-        'cobol'
+        'cobol',
+        'bash',
+        'graphql'
       ]
     })
 
