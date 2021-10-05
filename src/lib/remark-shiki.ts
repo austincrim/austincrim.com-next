@@ -17,7 +17,8 @@ export default function attacher() {
         'css',
         'cobol',
         'bash',
-        'graphql'
+        'graphql',
+        'json'
       ]
     })
 
