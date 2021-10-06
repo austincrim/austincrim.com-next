@@ -1,4 +1,3 @@
-import * as React from 'react'
 import Layout from '../../components/Layout'
 import { GetStaticPropsContext } from 'next'
 import { getAllSlugs, getPostBySlug } from '../../lib/posts'
@@ -27,7 +26,6 @@ export default function Post({ post }: { post: TPost }) {
           <span className='text-muted'>
             {new Date(post.dateWritten).toLocaleDateString()}
           </span>
-          <span className='text-muted'>{post.hits} hits</span>
         </div>
         <div className='max-w-4xl'>
           <div
