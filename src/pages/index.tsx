@@ -25,6 +25,16 @@ export default function Index({
           name="description"
           content="The portfolio of Austin Crim, a fullstack web developer"
         />
+        <meta
+          key="og:title"
+          property="og:title"
+          content="The portfolio of Austin Crim, a web developer"
+        />
+        <meta
+          key="og:url"
+          property="og:url"
+          content="https://austincrim.com"
+        />
       </Head>
       <Layout>
         <main>

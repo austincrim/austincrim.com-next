@@ -10,6 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
+          <meta key="og:type" property="og:type" content="website"></meta>
           <script type="text/javascript" src="/theme.js"></script>
         </Head>
         <body className="text-base transition-colors duration-300 bg-base">
