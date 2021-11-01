@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Link from 'next/link'
 import Head from 'next/head'
 import { getPosts } from '../lib/posts'
 import { getProjects } from '../lib/projects'
@@ -9,6 +10,7 @@ import ProjectCard from '../components/ProjectCard'
 import PostPreview from '../components/PostPreview'
 import Layout from '../components/Layout'
 import type { Post, Project } from '@prisma/client'
+import { RightArrow } from '../components/Icons'
 
 export default function Index({
   projects,
@@ -30,11 +32,7 @@ export default function Index({
           property="og:title"
           content="The portfolio of Austin Crim, a web developer"
         />
-        <meta
-          key="og:url"
-          property="og:url"
-          content="https://austincrim.com"
-        />
+        <meta key="og:url" property="og:url" content="https://austincrim.com" />
       </Head>
       <Layout>
         <main>
@@ -49,19 +47,32 @@ export default function Index({
             </ul>
           </Section>
           <Section title="Things I Have Written" id="blog">
-            <ul className="flex flex-col mt-20 space-y-20">
-              {posts.map((post) => (
-                <li key={post.slug}>
-                  <PostPreview post={post} />
-                </li>
-              ))}
-            </ul>
+            <div className="flex flex-col gap-10">
+              <ul className="flex flex-col mt-20 space-y-20">
+                {posts.map((post) => (
+                  <li key={post.slug}>
+                    <PostPreview post={post} />
+                  </li>
+                ))}
+              </ul>
+              <Link href="/blog">
+                <a className="self-end text-lg font-semibold transition-colors text-primary hover:text-secondary group">
+                  <span className="mr-1">Read more</span>
+                  <span className="inline-block align-middle transition-transform transform group-hover:translate-x-1">
+                    <RightArrow />
+                  </span>
+                </a>
+              </Link>
+            </div>
           </Section>
         </main>
 
         <Footer>
           <div className="flex flex-col items-center gap-4">
-            <a className="font-medium" href="mailto:aust.crim@gmail.com">
+            <a
+              className="font-medium underline"
+              href="mailto:aust.crim@gmail.com"
+            >
               Say Hi
             </a>
             <span>Designed and developed by Austin Crim</span>

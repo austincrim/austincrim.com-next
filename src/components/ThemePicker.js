@@ -53,7 +53,7 @@ export default function ThemePicker({ open }) {
           <li className={`inline-block mx-4 ${theme.id} transition-transform duration-150 hover:rotate-2`} key={theme.id}>
             <button
               aria-label={`select ${theme.title} theme`}
-              className='transition-transform duration-150 rounded focus:outline-none focus:ring-4 focus:rotate-2 group'
+              className='transition-transform duration-150 rounded focus:outline-none focus:ring-4 group'
               onClick={() => pickTheme(theme.id)}
             >
               <ThemeSwatch active={current === theme.id} title={theme.title} />

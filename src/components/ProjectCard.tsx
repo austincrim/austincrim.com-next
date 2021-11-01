@@ -3,7 +3,7 @@ import { Project } from '@prisma/client'
 export default function ProjectCard({ project }: { project: Project }) {
   const { title, description, repoUrl, appUrl } = project
   return (
-    <div className="flex flex-col justify-between py-8 space-y-8 lg:flex-row lg:items-center lg:max-w-[857px]">
+    <div className="flex flex-col justify-between py-8 space-y-8 lg:flex-row lg:items-center">
       <div className="flex flex-col">
         <h3 className="text-xl font-semibold tracking-wider text-secondary">
           {title}
