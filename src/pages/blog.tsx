@@ -12,8 +12,8 @@ export default function Blog({ posts }) {
           name="description"
           content="The blog of Austin Crim, a fullstack web developer"
         />
-        <meta key="og:title" name="og:title" content="Austin Crim's blog, about web development etc."></meta>
-        <meta key="og:image" name="og:image" content="/og/index.png"></meta>
+        <meta key="og:title" name="og:title" content="Austin Crim's blog about web development etc."></meta>
+        <meta key="og:image" name="og:image" content="https://austincrim.com/og/index.png"></meta>
         <meta
           key="twitter:card"
           name="twitter:card"
