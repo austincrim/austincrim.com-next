@@ -1,12 +1,14 @@
 const puppeteer = require('puppeteer-core')
 const chrome = require('chrome-aws-lambda')
 const { PrismaClient } = require('@prisma/client')
+const fsSync = require('fs')
 const fs = require('fs/promises')
 const path = require('path')
 const prisma = new PrismaClient()
 
+let browser
 async function main() {
-  let browser = await puppeteer.launch({
+  browser = await puppeteer.launch({
     args: chrome.args,
     executablePath:
       'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
@@ -34,22 +36,20 @@ async function main() {
       clip: { x: 0, y: 0, width: 1200, height: 630 }
     })
 
-    try {
-      await fs.stat(path.join(__dirname, 'public', 'og', slug))
+    let imagePath = path.join(__dirname, 'public', 'og', `${slug}.png`)
+
+    if (fsSync.existsSync(imagePath)) {
       console.log(`skipped!`)
-    } catch (e) {
+    } else {
       if (buffer) {
-        await fs.writeFile(
-          path.join(__dirname, 'public', 'og', `${slug}.png`),
-          buffer
-        )
-        console.log(`wrote ${slug}.png`)
+        await fs.writeFile(imagePath, buffer)
+        console.log(`wrote ${imagePath}`)
       }
     }
-
     await page.close()
   })
-  await browser.close()
 }
 
-main().then(() => console.log('done'))
+main().then(() => {
+  console.log('done')
+})
