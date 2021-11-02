@@ -24,7 +24,7 @@ export default function Post({ post }: { post: TPost }) {
         <meta
           key="og:image"
           name="og:image"
-          content={`https://austincrim.com/og/${post.slug}.webp`}
+          content={`https://austincrim.com/og/${post.slug}.png`}
         ></meta>
         <meta
           key="twitter:card"
