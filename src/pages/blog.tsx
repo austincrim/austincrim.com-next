@@ -12,6 +12,13 @@ export default function Blog({ posts }) {
           name="description"
           content="The blog of Austin Crim, a fullstack web developer"
         />
+        <meta key="og:title" name="og:title" content="Austin Crim's blog, about web development etc."></meta>
+        <meta key="og:image" name="og:image" content="/og/index.png"></meta>
+        <meta
+          key="twitter:card"
+          name="twitter:card"
+          content="summary_large_image"
+        ></meta>
       </Head>
       <Layout>
         <div className="flex flex-col max-w-5xl mx-auto my-20 space-y-12 dark:text-gray-50 md:rounded-lg">

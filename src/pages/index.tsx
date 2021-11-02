@@ -32,6 +32,12 @@ export default function Index({
           property="og:title"
           content="The portfolio of Austin Crim, a web developer"
         />
+        <meta key="og:image" name="og:image" content="/og/index.png"></meta>
+        <meta
+          key="twitter:card"
+          name="twitter:card"
+          content="summary_large_image"
+        ></meta>
         <meta key="og:url" property="og:url" content="https://austincrim.com" />
       </Head>
       <Layout>

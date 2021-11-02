@@ -21,6 +21,16 @@ export default function Post({ post }: { post: TPost }) {
     <>
       <Head>
         <meta key="og:title" name="og:title" content={post.title}></meta>
+        <meta
+          key="og:image"
+          name="og:image"
+          content={`/og/${post.slug}.webp`}
+        ></meta>
+        <meta
+          key="twitter:card"
+          name="twitter:card"
+          content="summary_large_image"
+        ></meta>
         <meta key="description" name="description" content={post.title}></meta>
       </Head>
       <Layout>

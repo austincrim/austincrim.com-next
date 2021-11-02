@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "og-image.js"  ],
   "exclude": [
     "node_modules"
   ]
