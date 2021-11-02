@@ -30,7 +30,7 @@ async function main() {
       waitUntil: 'domcontentloaded'
     })
     let buffer = await page.screenshot({
-      type: 'webp',
+      type: 'png',
       clip: { x: 0, y: 0, width: 1200, height: 630 }
     })
 
@@ -40,15 +40,16 @@ async function main() {
     } catch (e) {
       if (buffer) {
         await fs.writeFile(
-          path.join(__dirname, 'public', 'og', `${slug}.webp`),
+          path.join(__dirname, 'public', 'og', `${slug}.png`),
           buffer
         )
-        console.log(`wrote ${slug}.webp`)
+        console.log(`wrote ${slug}.png`)
       }
     }
 
     await page.close()
   })
+  await browser.close()
 }
 
 main().then(() => console.log('done'))
