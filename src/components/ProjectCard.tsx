@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             className="transition-colors text-primary hover:text-secondary"
             href={appUrl}
           >
-            Go to App
+            Go to Project
           </a>
         ) : (
           <></>
