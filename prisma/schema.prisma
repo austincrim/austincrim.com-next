@@ -1,6 +1,5 @@
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["dataProxy"]
 }
 
 datasource db {
@@ -27,6 +26,12 @@ model Project {
   repoUrl     String?
   appUrl      String?
   order       Int?    @default(-1)
+}
+
+model Appearance {
+  id     Int    @id @default(autoincrement())
+  title  String
+  imgUrl String
 }
 
 model View {

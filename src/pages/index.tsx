@@ -8,16 +8,20 @@ import Section from '../components/Section'
 import Footer from '../components/Footer'
 import ProjectCard from '../components/ProjectCard'
 import PostPreview from '../components/PostPreview'
+import Appearance from '../components/Appearance'
 import Layout from '../components/Layout'
-import type { Post, Project } from '@prisma/client'
+import type { Appearance as TAppearance, Post, Project } from '@prisma/client'
 import { RightArrow } from '../components/Icons'
+import { getAppearances } from '../lib/appearances'
 
 export default function Index({
   projects,
-  posts
+  posts,
+  appearances
 }: {
   projects: Array<Project>
   posts: Array<Post>
+  appearances: Array<TAppearance>
 }) {
   return (
     <>
@@ -32,7 +36,11 @@ export default function Index({
           property="og:title"
           content="The portfolio of Austin Crim, a web developer"
         />
-        <meta key="og:image" name="og:image" content="https://austincrim.com/og/index.png"></meta>
+        <meta
+          key="og:image"
+          name="og:image"
+          content="https://austincrim.com/og/index.png"
+        ></meta>
         <meta
           key="twitter:card"
           name="twitter:card"
@@ -43,6 +51,15 @@ export default function Index({
       <Layout>
         <main>
           <Hero />
+          <Section title="Places I Have Appeared" id="appearances">
+            <ul className="flex flex-col gap-10">
+              {appearances.map((appearance) => (
+                <li key={appearance.title}>
+                  <Appearance appearance={appearance} />
+                </li>
+              ))}
+            </ul>
+          </Section>
           <Section title="Things I Have Built" id="portfolio">
             <ul className="flex flex-col gap-10">
               {projects.map((project) => (
@@ -90,15 +107,17 @@ export default function Index({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const [posts, projects] = await Promise.all([
+  const [posts, projects, appearances] = await Promise.all([
     getPosts({ take: 3, orderBy: { hits: 'desc' } }),
-    getProjects()
+    getProjects(),
+    getAppearances()
   ])
 
   return {
     props: {
       projects,
-      posts: posts
+      posts,
+      appearances
     },
     revalidate: 1
   }
