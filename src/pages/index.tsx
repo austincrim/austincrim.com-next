@@ -48,22 +48,10 @@ export default function Index({
         ></meta>
         <meta key="og:url" property="og:url" content="https://austincrim.com" />
       </Head>
-      <main
-        style={{
-          display: 'grid',
-          placeContent: 'center',
-          marginBlock: '10rem'
-        }}
-      >
-        <img
-          alt="austincrim.com is under construction"
-          src="https://camo.githubusercontent.com/9811dac80f22a39580445a96ee1ba8e3d3ee2aa58da9b518dfafa4d595a509f4/687474703a2f2f7374617469632e646967672e636f6d2f7374617469632f696d616765732f6469676765722e676966"
-        />
-      </main>
-      {/* <Layout>
+      <Layout>
         <main>
           <Hero />
-          <Section title="Places I Have Appeared" id="appearances">
+          {/* <Section title="Places I Have Appeared" id="appearances">
             <ul className="flex flex-col gap-10">
               {appearances.map((appearance) => (
                 <li key={appearance.title}>
@@ -71,7 +59,7 @@ export default function Index({
                 </li>
               ))}
             </ul>
-          </Section>
+          </Section> */}
           <Section title="Things I Have Built" id="portfolio">
             <ul className="flex flex-col gap-10">
               {projects.map((project) => (
@@ -113,24 +101,24 @@ export default function Index({
             <span>Designed and developed by Austin Crim</span>
           </div>
         </Footer>
-      </Layout> */}
+      </Layout>
     </>
   )
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const [posts, projects, appearances] = await Promise.all([
-//     getPosts({ take: 3, orderBy: { hits: 'desc' } }),
-//     getProjects(),
-//     getAppearances()
-//   ])
+export const getStaticProps: GetStaticProps = async () => {
+  const [posts, projects, appearances] = await Promise.all([
+    getPosts({ take: 3, orderBy: { hits: 'desc' } }),
+    getProjects(),
+    getAppearances()
+  ])
 
-//   return {
-//     props: {
-//       projects,
-//       posts,
-//       appearances
-//     },
-//     revalidate: 1
-//   }
-// }
+  return {
+    props: {
+      projects,
+      posts,
+      appearances
+    },
+    revalidate: 1
+  }
+}
