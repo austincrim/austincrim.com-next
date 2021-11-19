@@ -51,27 +51,18 @@ export default function Index({
       <Layout>
         <main>
           <Hero />
-          {/* <Section title="Places I Have Appeared" id="appearances">
-            <ul className="flex flex-col gap-10">
+          <Section title="Places I Have Appeared" id="appearances">
+            <ul className="grid gap-20 py-8 md:grid-cols-2 md:place-items-end">
               {appearances.map((appearance) => (
                 <li key={appearance.title}>
                   <Appearance appearance={appearance} />
                 </li>
               ))}
             </ul>
-          </Section> */}
-          <Section title="Things I Have Built" id="portfolio">
-            <ul className="flex flex-col gap-10">
-              {projects.map((project) => (
-                <li key={project.title}>
-                  <ProjectCard project={project} />
-                </li>
-              ))}
-            </ul>
           </Section>
           <Section title="Things I Have Written" id="blog">
-            <div className="flex flex-col gap-10">
-              <ul className="flex flex-col mt-20 space-y-20">
+            <div className="flex flex-col gap-10 py-8">
+              <ul className="flex flex-col space-y-20">
                 {posts.map((post) => (
                   <li key={post.slug}>
                     <PostPreview post={post} />
@@ -87,6 +78,15 @@ export default function Index({
                 </a>
               </Link>
             </div>
+          </Section>
+          <Section title="Things I Have Built" id="portfolio">
+            <ul className="flex flex-col gap-10 py-8">
+              {projects.map((project) => (
+                <li key={project.title}>
+                  <ProjectCard project={project} />
+                </li>
+              ))}
+            </ul>
           </Section>
         </main>
 

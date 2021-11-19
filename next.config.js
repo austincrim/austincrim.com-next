@@ -1,3 +1,6 @@
 module.exports = {
-  experimental: { esmExternals: true }
+  experimental: { esmExternals: true },
+  images: {
+    domains: ['img.youtube.com', 'camo.githubusercontent.com']
+  }
 }
