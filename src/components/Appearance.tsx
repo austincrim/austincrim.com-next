@@ -13,7 +13,7 @@ export default function Appearance({
     >
       <span className="text-lg font-semibold">{appearance.title}</span>
       <Image
-        className="object-cover"
+        className="object-cover rounded-2xl"
         width="480"
         height="270"
         src={appearance.imgUrl}
