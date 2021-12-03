@@ -29,15 +29,20 @@ model Project {
 }
 
 model Appearance {
-  id            Int     @id @default(autoincrement())
+  id            Int             @id @default(autoincrement())
   title         String
-  imgUrl        String?
-  imgAlt        String?
-  appearanceUrl String?
+  appearanceUrl String
+  type          AppearanceType?
 }
 
 model View {
   id        String   @id @default(uuid())
   path      String
   visitedAt DateTime @default(now())
+}
+
+enum AppearanceType {
+  Stream
+  Talk
+  Screencast
 }
