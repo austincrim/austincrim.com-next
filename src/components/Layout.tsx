@@ -15,7 +15,7 @@ export default function Layout({ children }) {
         }`}
       >
         <Nav pickerOpen={pickerOpen} setPickerOpen={setPickerOpen} />
-        <div className='px-10 mx-auto lg:max-w-5xl md:max-w-3xl'>
+        <div className="px-10 mx-auto lg:max-w-5xl md:max-w-3xl">
           {children}
         </div>
       </div>
